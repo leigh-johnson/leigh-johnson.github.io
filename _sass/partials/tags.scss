@@ -1,0 +1,31 @@
+.set-5 {
+  @extend .label;
+  @extend .label-danger;
+}
+
+.set-4{
+  @extend .label;
+  @extend .label-warning;
+
+}
+.set-3{
+  @extend .label;
+  @extend .label-success;
+}
+.set-2{
+  font-size: 1.3em;
+}
+.set-1{
+  @extend .label;
+  @extend .label-primary;
+}
+
+[class*='set-'] {
+  display: inline-block;
+  font-variant: small-caps;
+  font-weight: 600;
+   display:block;
+   float:left;
+   margin:7px 0 0 4px;
+   font-size: 1.2em;
+}

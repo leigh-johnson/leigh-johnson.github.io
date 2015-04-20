@@ -1,0 +1,25 @@
+// Add your own custom CSS here.
+@import "pygments-tomorrow";
+
+.post-content img,
+.post-excerpt-home img,
+.post-nav img {
+  @extend .img-rounded;
+}
+.post-content table,
+.post-excerpt-home table,
+.post-nav table {
+  @extend .table;
+  @extend .table-bordered;
+}
+
+.logo {
+display:inline-block;
+height: 32px;
+padding-bottom: 5px;
+}
+
+.spoiler {
+    background-color:#000000;
+    color:#000000;
+}

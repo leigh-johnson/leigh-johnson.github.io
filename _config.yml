@@ -1,0 +1,36 @@
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "http://blog.leighjohnson.me" # the base hostname & protocol for your site
+title: "PSYCHONAUT IN CYBERSPACE"
+brand: "/logo-v2.png"
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+# https://github.com/pattex/jekyll-tagging
+# Looks for _layouts/tag_page.html to generate _site/tag dir
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+gems:
+  - jemoji
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "Rakefile"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

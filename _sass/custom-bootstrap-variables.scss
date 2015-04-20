@@ -1,0 +1,6 @@
+// Custom Bootstrap variables
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #1e1e1e;
+    background-color: transparent; 
+    transition: all 0.2s ease 0s;
+}
