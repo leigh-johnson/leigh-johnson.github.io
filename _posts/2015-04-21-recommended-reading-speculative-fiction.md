@@ -81,7 +81,7 @@ The MaddAddam triology is an immense construction.
 
 In _Oryx & Crake_, Atwood explores triumphs and forfeits of bioengineering. The narrative shifts between each side of an apocalyptic bioweapon event: before & after the "flood". This story follows a well-educated cast who live in an affluent corporate compound (a sharp nod to white flight)
 
-_The Year of the Flood_ also braids  around a different sections of a timeline, but focuses on pleebland characters. This a beautiful, humanist story is about very ugly subjects: cults, poverty, and brutality.
+_The Year of the Flood_ also braids around sections of the same timeline, but focuses on pleebland characters. This a beautiful, humanist story is about very ugly subjects: cults, poverty, and brutality.
 
 <blockquote>
 <p>“Not real can tell us about real.” 
