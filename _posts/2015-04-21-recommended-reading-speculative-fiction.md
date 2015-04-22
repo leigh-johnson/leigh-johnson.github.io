@@ -4,6 +4,8 @@ tags: ["#bookrec", "#comics"]
 description: "Recommended Reading: Speculative Fiction"
 hide_sidebar: true
 excerpt: "I've always been fond of models, especially the constucts of speculative fiction authors. "
+image: "covers/oryx-and-crake-margaret-atwood.jpg"
+comments: true
 --- 
 
 ## I've always been fond of models. 
