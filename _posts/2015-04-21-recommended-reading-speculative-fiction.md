@@ -1,14 +1,14 @@
 ---
-title: "Conversation Starters: Speculative Fiction"
+title: "Recommended Reading: Speculative Fiction"
 tags: ["#bookrec", "#comics"]
-description: "Conversation Starters: Speculative Fiction"
+description: "Recommended Reading: Speculative Fiction"
 hide_sidebar: true
 excerpt: "I've always been fond of models, especially the constucts of speculative fiction authors. "
 --- 
 
 ## I've always been fond of models. 
 
-When my mother and I relocated from the Bronx to upstate NY, I coped by building a Lego replica of my previous elementary school (it was a spaceship too - those years were cast from impressions of Bill Watterson's Calvin & Hobbes). We moved from a high-rise apartment building into a long-fallow farm. In the following years, I charted each step of the retired pastures and made notes about defensible high-ground (Starcraft: Brood Wars ruled my strategic designs), good cache locations, and the shady places where wild blackberries could ripen, unscorched, through August. 
+When my mother and I relocated from the Bronx to upstate NY, I coped by building a Lego replica of my previous elementary school (it was a spaceship too - those years were cast from impressions of Bill Watterson's Calvin & Hobbes). 
 
 I process my world by sketching, graphing, and building facsimiles of it. It makes sense that I would have an affinity for authors who do the same: Speculative Fiction is a type of derivative model. The author extrapolates about how a model might present, usually to entice attention to the current climate.
 
@@ -22,7 +22,7 @@ would be the territory, and thus would be perfectly accurate and perfectly usele
 <footer>Neil Gaiman, <cite title="The Mapmaker">The Mapmaker</cite></footer>
 </blockquote>
 
-There's natural tension when authors scaffold their model: how do you convincingly deconstruct culturally pervasive ideas, without boring your audience to indifference? Sue McGregor's "Consumerism as a Source of Structural Violence" has a much shorter reach than JG Ballard's "Kingdom Come", for example.
+There's natural tension when authors scaffold their model: how do you convincingly deconstruct culturally pervasive ideas, without boring your audience to indifference? Sue McGregor's "Consumerism as a Source of Structural Violence" has a much shorter reach than JG Ballard's "Kingdom Come", for example. Speculative fiction is an expressive way to point to a a piece of cultural structure. 
 
 So, I would like to share a list of my favorite topical conversation starters. These are some of the titles I own (sometimes in multiplicate) to lend over and over again.
 
