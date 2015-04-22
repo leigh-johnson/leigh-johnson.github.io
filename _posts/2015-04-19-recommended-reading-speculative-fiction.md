@@ -1,6 +1,6 @@
 ---
 title: "Conversation Starters: Speculative Fiction"
-tags: ["#bookreview", "#comics", "#reading"]
+tags: ["#bookrec", "#comics"]
 description: "Conversation Starters: Speculative Fiction"
 hide_sidebar: true
 excerpt: "I've always been fond of models, especially the constucts of speculative fiction authors. "
@@ -41,7 +41,7 @@ So, I would like to share a list of my favorite topical conversation starters. T
 
 ###### _Ubiquity & Reach of Big Data, Digital Privacy, Social Media Culture, Content Generation_
 
-David Eggers is not always subtle. The man wrote _"A Heartbreaking Work of Staggering Genius"_. The Circle is an unabashed satire about public/private ownership, transparency, and a skinner box of constant social feedback. The story is told in a highly conventional third-person narrative style. 
+David Eggers (author of _"A Heartbreaking Work of Staggering Genius"_) is not always subtle. The Circle is an unabashed satire about public/private ownership, transparency, and a skinner box of constant social feedback. The story is told in a highly conventional third-person narrative style. 
 
 Some passages read like a product teaser ripped from [Ars Technica](http://arstechnica.com/). 
 
@@ -55,29 +55,31 @@ Some passages read like a product teaser ripped from [Ars Technica](http://arste
 
 <img src="/assets/comics/transmetropolitan-election.jpg" class="col-md-3 pull-right"/>
 
-##### Two Party System, Consumerism, Aestheticization of Violence, Media Conglomerates, Trans*
+##### Two Party System, Consumerism, Journalism & Media Conglomerates
 
-Spider Jerusalem is a vulgar, drug-addicted sci-fi journalist made in Hunter S. Thompson's image. He's overtly anti-authoritarian and a survivalist - the series opens with Spider returning from secluded mountain bunker to The City.
+Spider Jerusalem is a vulgar, drug-addicted sci-fi journalist made in Hunter S. Thompson's image. Spider is overtly anti-authoritarian and his scathing reports dissect The City's amalgum of consumerism, violence, corrupt politicians, and exploitive free enterprises. 
 
-I love this series, it's a joy to recommend. Spider's scathing reports about two-party puppet governments are underpinned by dystopian details in every frame. Muppets have been replaced by Sex Puppets. Police are outfitted in military-grade technology and are entirely for sale. Society is Balkanized by myriad religions, immmense class stratification, and Trans*Humanism. 
+Culture in The City is Balkanized by myriad religions and immmense class stratification. 
 
-An uncanny twist of surreal and so-real! 
+This comic is an unsettling barrage of surreal and so-real.
 
 <blockquote>
-<p>"If you believe that your thoughts originate inside your brain, do you also believe that television shows are made inside your television set?"
+<p>There's one hole in every revolution, large or small. And it's one word long— PEOPLE. No matter how big the idea they all stand under, people are small and weak and cheap and frightened. It's people that kill every revolution.
 </p>
 <footer> Warren Ellis, <cite title="Transmetropolitan">Transmetropolitan</cite></footer>
 </blockquote>
 
 ## _Oryx and Crake (MaddAddam #1)_ - Margaret Atwood (2003)
 
-##### Transgenics & Capitalism, Suburban Flight, Bioweapons
+##### Transgenics & Capitalism, Suburban Flight, Bioweapons, Humanism
 
 <img src="/assets/covers/oryx-and-crake-margaret-atwood.jpg" class="col-md-3 pull-left" />
 
-Food-grade animal engineering keeps the first world flush with fresh meat. Affluent, educated workers live in corporate compounds protected by private military-police (a sharp nod to Suburban Flight). Margaret Atwood succinctly describes the way civilization collapses: <span class="spoiler">A bioweapon, seeded through populations via a prophylactic-cum-aphrodisiac pharmaceutical, kills everyone.</span>
+The MaddAddam triology is an immense construction. 
 
-The MaddAddam triology pairs familiar cultural references with a severe, disturbing narrative about humanity. 
+In _Oryx & Crake_, Atwood explores triumphs and forfeits of bioengineering. The narrative shifts between each side of an apocalyptic bioweapon event: before & after the "flood". This story follows a well-educated cast who live in an affluent corporate compound (a sharp nod to white flight)
+
+_The Year of the Flood_ also braids  around a different sections of a timeline, but focuses on pleebland characters. This a beautiful, humanist story is about very ugly subjects: cults, poverty, and brutality.
 
 <blockquote>
 <p>“Not real can tell us about real.” 
