@@ -17,7 +17,7 @@ Multiboot is a powerful tool for both developers & quality assurance testers, an
 
 First, you should figure out which versions of OS X you're going to support. 
 
-This tutorial assumes you already have an Apple computer and a valid install of OS X. Screenshots in this guide were taken on 10.10.3. 
+This tutorial assumes you already have an Apple computer and a valid install of OS X. These instructions were written using 10.10.3 for reference.
 
 ### Download all OS X installer packages
 
