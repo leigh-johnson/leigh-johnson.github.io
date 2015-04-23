@@ -7,13 +7,13 @@ comments: true
 hide_sidebar: true
 ---
 
-# Why should I multiboot?
+## Why should I multiboot?
 
 Machines are expensive! If you need to test a product against multiple versions of OS X, it's VERY costly to purchase an Apple computer per unique configuration. 
 
 Multiboot is a powerful tool for both developers & quality assurance testers, and it's very easy to setup. 
 
-# How do I get started?
+## How do I get started?
 
 First, you should figure out which versions of OS X you're going to support. 
 
