@@ -23,7 +23,7 @@ This tutorial assumes you already have an Apple computer and a valid install of 
 
 1. Open the **App Store** & browse to the **Purchases** tab. 
 2. Download the versions of OS X you'll need. If you see an error that prompts *Would you like to continue?*, press continue.
-3. If your current version of OS X is ahead of the one you just downloaded, you'll see can error: *This copy of "Install OS X" application is too old to be opened on this version of OS X*. Dismiss this error by pressing the quit button. 
+3. If your current version of OS X is ahead of the one you just downloaded, you'll see an error: *This copy of "Install OS X" application is too old to be opened on this version of OS X*. Dismiss this error by pressing the quit button. 
 
 
 ### Partition the HDD (Part 1)
@@ -58,7 +58,7 @@ Is your HDD done partitioning yet? Wait for it to finish before proceeding.
 1. In the ```Disk Utility``` tool, select ```InstallVolume``` from the left-hand list. 
 2. Browse to the ```Restore``` tab.
 3. Ensure the **Source** is already ```InstallVolume```! 
-4. You should see ```BaseSystem.dmg``` in the list of images on the left. Drag ```BaseSystem.dmg`` (**DO NOT** drag ```OS X Base System```) into the ```Destination``` field on the right.
+4. You should see ```BaseSystem.dmg``` in the list of images on the left. Drag ```BaseSystem.dmg``` (**DO NOT** drag ```OS X Base System```) into the ```Destination``` field on the right.
 5. Press restore.
 6. When the write is done, the ```InstallVolume```'s name' will change to ```OS X Base System```
 
