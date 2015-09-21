@@ -1,6 +1,6 @@
 ---
 title: "How to setup & configure a multiboot environment on OS X"
-tags: ["#osx", "#sysadmin", "#environments"]
+tags: ["osx", "sysadmin", "environments"]
 description: "Multiboot is a handy way to house multiple test environments & configurations on one machine. Multiboot is very easy to setup on OS X"
 excerpt: "Multiboot is a handy way to house multiple test environments & configurations on one machine. Multiboot is very easy to configure in OS X."
 comments: true
