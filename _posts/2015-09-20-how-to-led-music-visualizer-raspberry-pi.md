@@ -2,9 +2,9 @@
 title: "Building an LED music visualizer on a Raspberry Pi - Assemble the Mats"
 tags: ["#raspberrypi", "#neopixels", "#python"]
 description: "A multi-part series in which I attempt to build a rainbowlific music visualizer with an LED strip (WS2812) & Raspberry Pi. This post is a project introduction and materials/software list."
-excerpt: "A multi-part series about how I built a colorful music visualizer with an LED strip (WS2812) & Raspberry Pi 2. This post is a project introduction, design spec, and materials/reading list."
+excerpt: "A multi-part series in which I attempt to build a rainbowlific music visualizer with an LED strip (WS2812) & Raspberry Pi. This post is a project introduction and materials/software list."
 comments: true
-hide_sidebar: true
+hide_sidebar: false
 ---
 
 # Design Goals
@@ -42,7 +42,6 @@ A very basic example might allow the client/controller to set RGB values via CLI
 
 * [Socket.io](http://socket.io/) will handle pub/sub patterns between the controller and receiver. 
 * [rpi_ws281x](https://github.com/richardghirst/rpi_ws281x) - both a [SWIG-generated interface](https://github.com/richardghirst/rpi_ws281x/blob/master/python/examples/lowlevel.py) and [high level API](https://github.com/richardghirst/rpi_ws281x/blob/master/python/examples/strandtest.py)
-OR
 
 
 # Research, inspiration, references
