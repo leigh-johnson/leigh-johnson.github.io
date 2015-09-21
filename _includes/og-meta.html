@@ -4,6 +4,7 @@
 {% else %}
   <meta content="{{ site.title }}" property="og:title">
 {% endif %}
+<meta property="og:type" content="website" />
 {% if page.title %}
   <meta content="article" property="og:type">
 {% else %}
@@ -24,7 +25,7 @@
 {% if page.image %}
   <meta content="/assets/{{ page.image }}" property="og:image">
 {% else %}
-  <meta content="/assets/{{site.avatar}}" property="og:image">
+  <meta content="{{site.brand}}" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
