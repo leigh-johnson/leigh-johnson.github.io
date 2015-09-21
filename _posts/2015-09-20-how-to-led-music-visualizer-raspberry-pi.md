@@ -33,7 +33,7 @@ A very basic example might allow the client/controller to set RGB values via CLI
 * Female/Male jumper wires
 * Male/Male jumper wires
 * Breadboard, like [half board via Adafruit](http://www.adafruit.com/products/64).
-* Power supply. I'm using [5V 4A (4000mA) via Adafruit](http://www.adafruit.com/products/1466). Each neopixels LED has 60mA draw per unit, so if you plan on using more than 30 units I recommend 10A.
+* Power supply. I'm using [5V 4A (4000mA) via Adafruit](http://www.adafruit.com/products/1466).
 * Power Jack [via Adafruit](http://www.adafruit.com/products/368).
 * Raspberry Pi 2
 * [Raspberry Leaf](https://www.raspberrypi.org/blog/raspberry-leaf/) reference sheet. This is going to save me so many silly mistakes over the course of this project!
