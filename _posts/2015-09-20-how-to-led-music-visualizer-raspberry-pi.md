@@ -1,6 +1,6 @@
 ---
 title: "Building an LED music visualizer on a Raspberry Pi - Assemble the Mats"
-tags: ["#raspberrypi", "#neopixels", "#python"]
+tags: ["raspberrypi", "neopixels", "python"]
 description: "A multi-part series in which I attempt to build a rainbowlific music visualizer with an LED strip (WS2812) & Raspberry Pi. This post is a project introduction and materials/software list."
 excerpt: "A multi-part series in which I attempt to build a rainbowlific music visualizer with an LED strip (WS2812) & Raspberry Pi. This post is a project introduction and materials/software list."
 comments: true

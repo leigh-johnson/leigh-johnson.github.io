@@ -1,6 +1,6 @@
 ---
 title: "Recommended Reading: Speculative Fiction"
-tags: ["#bookrec", "#comics"]
+tags: ["bookrec", "comics"]
 description: "Recommended Reading: Speculative Fiction"
 hide_sidebar: true
 excerpt: "I've always been fond of models, especially the constucts of speculative fiction authors. "
