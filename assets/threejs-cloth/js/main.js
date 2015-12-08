@@ -6,7 +6,6 @@ $('.controls a').click(function(e){
 
 var camera, scene, renderer;
 var clothGeometry;
-var sphere;
 var object;
 var rotate = {};
 rotate.right = true;
@@ -44,7 +43,7 @@ function init() {
         // scene
 
         scene = new THREE.Scene();
-        scene.fog = new THREE.Fog( 0x1e1e1e, 500, 10000 );
+        scene.fog = new THREE.Fog( 0x080808, 420, 10000 );
 
         // camera
 
@@ -59,7 +58,7 @@ function init() {
         var poleMat = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x111111, shininess: 100 } );
 
 
-        var mesh = new THREE.Mesh( new THREE.BoxGeometry(1500, 5,5 ), poleMat );
+        var mesh = new THREE.Mesh( new THREE.BoxGeometry(1500, 25,25 ), poleMat );
         mesh.scale.set(.8,.8,.8);
         mesh.position.y = -125 + 750/2;
         mesh.position.x = -10;
@@ -71,7 +70,7 @@ function init() {
 
         var light, materials;
 
-        scene.add( new THREE.AmbientLight( 0x666666 ) );
+        scene.add( new THREE.AmbientLight( 0x555555 ) );
 
         light = new THREE.DirectionalLight( 0xdfebff,1.5);
         //light.position.set( 50, 200, 100 );
@@ -93,13 +92,13 @@ function init() {
 
         light.shadowCameraFar = 1000;
 
-        scene.add( light );
+        camera.add( light );
   
         //leftLight = light;
         //light.position.set( 1000, 100, 50);
         //scene.add(leftLight);
         
-        var directionalLightHelper = new THREE.DirectionalLightHelper(light, 20);
+        //var directionalLightHelper = new THREE.DirectionalLightHelper(light, 20);
         //scene.add(directionalLightHelper);
 
         // cloth material
@@ -183,15 +182,6 @@ function init() {
           side: THREE.DoubleSide
         } );
 
-        // sphere
-
-        var ballGeo = new THREE.SphereGeometry( ballSize, 20, 20 );
-        var ballMaterial = new THREE.MeshPhongMaterial( { color: 0xaaaaaa } );
-        
-        sphere = new THREE.Mesh( ballGeo, ballMaterial );
-        sphere.castShadow = true;
-        sphere.receiveShadow = true;
-        scene.add( sphere );
 
         renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.setPixelRatio( window.devicePixelRatio );
@@ -213,17 +203,18 @@ function init() {
 
         //window.addEventListener( 'resize', onWindowResize, false );
 
-        sphere.visible = false;
-
 }
+
+var forceScale = 2000;
+var strengthScale = 7000;
 function animate() {
 
   requestAnimationFrame( animate );
 
   var time = Date.now();
 
-  windStrength = Math.cos( time / 7000 ) * 20 + 40;
-  windForce.set( Math.sin( time / 2000 ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) ).normalize().multiplyScalar( windStrength );
+  windStrength = Math.cos( time / strengthScale) * 20 + 40;
+  windForce.set( Math.sin( time / forceScale ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) ).normalize().multiplyScalar( windStrength );
 
   simulate(time);
   render();
@@ -249,7 +240,6 @@ function render() {
   clothGeometry.normalsNeedUpdate = true;
   clothGeometry.verticesNeedUpdate = true;
 
-  sphere.position.copy( ballPosition );
   
   if ( rotate.left ) {
     camera.position.x = Math.cos(timer ) * 1500;

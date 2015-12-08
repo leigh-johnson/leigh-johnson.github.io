@@ -92,7 +92,7 @@ comments: true
         <span class="fa fa-share"></span>
       </button>
     </div>
-    <div id='canvas-wrapper' class='col-md-6 col-md-offset-3'>
+    <div id='canvas-wrapper' class='col-md-7 col-md-offset-3'>
     </div>
   </div>
 </div>
@@ -138,6 +138,7 @@ comments: true
 
       }
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.js"></script>
 <script src="/assets/threejs-cloth/js/cloth.js"></script>
 <script src="/assets/threejs-cloth/js/main.js"></script>

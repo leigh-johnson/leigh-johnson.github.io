@@ -273,7 +273,7 @@ function simulate( time ) {
 
   // Ball Constrains
 
-
+/*
   ballPosition.z = - Math.sin( Date.now() / 600 ) * 90 ; //+ 40;
   ballPosition.x = Math.cos( Date.now() / 400 ) * 70;
 
@@ -293,6 +293,7 @@ function simulate( time ) {
     }
 
   }
+  */
 
   // Floor Constains
   for ( particles = cloth.particles, i = 0, il = particles.length
