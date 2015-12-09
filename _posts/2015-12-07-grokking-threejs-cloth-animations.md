@@ -10,6 +10,11 @@ comments: true
 <link href="/assets/threejs-cloth/styles/styles.css" rel="stylesheet">
 <div class='container'>
     <div class='row'>
+    </div>
+    <div class="jumbotron">
+      <h1> A quick demonstration - <small>writeup soon!</small></h1>
+    </div>
+    <div class='row'>
       <h1 class='col-md-6'> Choose a pattern:</h1>
     </div>
     <div class='row controls'>
@@ -80,19 +85,21 @@ comments: true
 </div>
 <div class='container'>
   <div class='row'>
-    <div class='btn-group col-md-3' role="group">
-      <h1> Rotation:</h1>
-      <button class='btn btn-default btn-lg rotate' data-direction="left">
-        <span class="fa fa-reply"></span>
-       </button>
-      <button class='btn btn-default btn-lg rotate'>
-        <span class="fa fa-pause"></span>
-      </button>
-      <button class='active btn-default btn btn-lg rotate' data-direction="right">
-        <span class="fa fa-share"></span>
-      </button>
+    <div id='canvas-wrapper' class='col-md-7'>
     </div>
-    <div id='canvas-wrapper' class='col-md-7 col-md-offset-3'>
+    <div class="col-md-3">
+    <h1> Rotation:</h1>
+      <div class='btn-group' role="group">
+        <button class='btn btn-default btn-lg rotate' data-direction="left" data-container="body" data-toggle="popover" data-placement="bottom" data-content="">
+          <span class="fa fa-reply"></span>
+         </button>
+        <button class='btn btn-default btn-lg rotate'>
+          <span class="fa fa-pause"></span>
+        </button>
+        <button class='active btn-default btn btn-lg rotate' data-direction="right">
+          <span class="fa fa-share"></span>
+        </button>
+      </div>
     </div>
   </div>
 </div>

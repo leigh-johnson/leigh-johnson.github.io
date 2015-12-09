@@ -1,7 +1,7 @@
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "http://blog.leighjohnson.me" # the base hostname & protocol for your site
 title: "Psychonaut in Cyberspace"
-brand: "/assets/logo-v2.png"
+brand: "/assets/logo-v3.png"
 avatar: "https://avatars3.githubusercontent.com/u/2601819?v=3&s=200"
 
 # This is used by feed.xml. Uncomment if you want to use it.
@@ -15,6 +15,7 @@ tag_permalink_style: pretty
 
 gems:
   - jemoji
+  - jekyll-haml
 exclude:
   - "README.md"
   - "CHANGELOG.md"
