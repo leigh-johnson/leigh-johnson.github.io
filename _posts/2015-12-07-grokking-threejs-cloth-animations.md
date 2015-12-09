@@ -11,9 +11,7 @@ comments: true
 <div class='container'>
     <div class='row'>
     </div>
-    <div class="jumbotron">
       <h1> A quick demonstration - <small>writeup soon!</small></h1>
-    </div>
     <div class='row'>
       <h1 class='col-md-6'> Choose a pattern:</h1>
     </div>
