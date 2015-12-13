@@ -12,10 +12,12 @@ avatar: "https://avatars3.githubusercontent.com/u/2601819?v=3&s=200"
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
+highlighter: pygments
 
 gems:
   - jemoji
   - jekyll-haml
+  - pygments.rb
 exclude:
   - "README.md"
   - "CHANGELOG.md"
