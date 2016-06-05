@@ -1,6 +1,6 @@
 ---
 title: "PyCon 2016: Down the Magic Wormhole"
-tags: ["pycon2016", "python", "encryption"]
+tags: ["pycon2016", "python", "cryptography"]
 excerpt: "Brian Warner created a PAKE-based exchange to unite two inbound TCP connections, and initiate an adhoc data transfer between them."
 comments: true
 hide_sidebar: true
@@ -88,7 +88,7 @@ Enter receive wormhole code: 2-filament-cubic
 
 PAKE & SPAKE2 use a weak shared password to derive a much stronger shared secret key. If both sides input the same password, both sides can anticipate receiving the same key. If either side inputs a password failing the challenge, the received keys will be random.
 
-Brian Warner mentioned SPAKE2 strongly resembles a basic DH exchange, which gave me a stronger grasp of what's happening going on stage right. Here's my crack at solving drastically over-simplified version of this problem (expect at least 3 things to be utterly wrong):
+Brian Warner mentioned SPAKE2 strongly resembles a basic DH exchange, which gave me a stronger grasp of what's happening going on stage right. Here's my crack at solving a drastically over-simplified version of this problem:
 
 <div class="col-sm-5 pull-right">
 <img class="img-responsive" src="/assets/magic-wormhole/spake2.png" alt="source: Move Things From One Computer to Another, Safely by Brian Warner"/>
