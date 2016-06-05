@@ -109,9 +109,6 @@ def scalarMult(A,n):
     result = [[n*i for i in row] for row in A]
     return result
 
-def H(n):
-    return someImportedHash(n)
-
 x = os.urandom(p)
 y = os.urandom(p)
 X1 = scalerMult(g, x)
