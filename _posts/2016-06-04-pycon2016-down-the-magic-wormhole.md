@@ -119,8 +119,8 @@ Y2 = Y1 + scalerMult(N, pw)
 P = scalerMult(X2 + scalerMult(M, -(pw)), x)
 Q = scalerMult(Y2 + scalerMult(N, -(pw)), y)
 assert H(pw + X2 + Y2 + P) == H(pw + X2 + Y2 + Q), "One of these things is not like the other"
-key_1 = H(pw + X* + Y* + P)
-key_2 = H(pw + X* + Y* + Q)
+key_1 = H(pw + X2 + Y2 + P)
+key_2 = H(pw + X2 + Y2 + Q)
 {% endhighlight %}
 
 ## What does a selfsame session key do?
