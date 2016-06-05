@@ -133,11 +133,11 @@ Each client will listen to a set of TCP ports and also broadcast on a range of p
 
 Magic Wormhole direct connections through a TURN server, which allows a client behind a NAT to request that the server act as relay.  The server relays packets on the behalf of the client to and from peers.
 
-TURN is the most expensive relay protocol, becauase it behaves as a data stream between peers. Brian Warner has generously baked his own TURN into the source code of Magic Wormhole.
+TURN is the most expensive relay protocol, becauase it behaves as a data stream between peers. Brian Warner has generously provided the address of both his own TURN for file transfers, and the websocket service used during the keying phase.
 
 ## Where to from here?
 
-I setup a fragile TURN (tcp:wormhole.leighjohnson.com:4001) and websocket rendevous (ws://wormhole.leighjohnson.me:4000) without much effort. I haven't been able to use either by passing options through the CLI, but they're working fine when I replace the hard-coded values in [magic-wormhole/src/wormhole/cli/public_relay.py](https://github.com/warner/magic-wormhole/blob/master/src/wormhole/cli/public_relay.py).
+I setup a fragile TURN (tcp:wormhole.leighjohnson.com:7001) and websocket rendevous (ws://wormhole.leighjohnson.me:7000) without much effort. I haven't been able to use either by passing options through the CLI, but they're working fine when I replace the hard-coded values in [magic-wormhole/src/wormhole/cli/public_relay.py](https://github.com/warner/magic-wormhole/blob/master/src/wormhole/cli/public_relay.py).
 
 The takeaway: PAKE crypto is a nifty way to ramp humans/devices into a more complex exchange. Some more use cases I think are worth exploring:
 
