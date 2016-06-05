@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "github-pages", ">= 25"
-gem "jekyll-tagging", "0.4.0"
+gem "jekyll-tagging"
 
 group :jekyll_plugins do
  gem "jekyll-haml"

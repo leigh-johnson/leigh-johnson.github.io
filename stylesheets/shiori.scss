@@ -4,7 +4,7 @@
 $container-large-desktop: 970px;
 
 $font-family-base: "Merriweather", "Helvetica Neue", Arial, sans-serif;
-$headings-font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Raleway", "Helvetica Neue", Arial, sans-serif;
 $headings-font-weight: 700;
 
 $font-size-base: 15px;
@@ -43,7 +43,7 @@ $dark-brand-primary: #5b7fa4; // Set saturation to 50
 $turquoise: #3FB8AF;
 $green: #2ecc71;
 $blue: #3498db;
-$purple: #9b59b6;
+$purple: #8275A0;
 $orange: #e67e22;
 $red: #e74c3c;
 
@@ -57,8 +57,8 @@ $red: #e74c3c;
   }
 {% endunless %}
 
-@import "bootstrap-sass/bootstrap";
 @import "custom-bootstrap-variables";
+@import "bootstrap-sass/bootstrap";
 
 
 $space-xs: $line-height-computed * 1;
@@ -79,9 +79,37 @@ h3 {
     font-size: $blockquote-font-size;
   }
 }
+.width-65{
+  width: 65%;
+}
+.width-33{
+  width: 33%;
+}
 
 .btn {
   font-family: $headings-font-family;
+}
+
+.media-heading{
+  font-size: 34px;
+}
+
+.turquoise{
+  color: $turquoise;
+}
+.purple{
+  color: $purple;
+}
+.text-reverse{
+  display: inline-block;
+  -moz-transform: scaleX(-1);    /* Gecko */
+  -o-transform: scaleX(-1);      /* Opera */
+  -webkit-transform: scaleX(-1); /* Webkit */
+  transform: scaleX(-1);         /* Standard */
+  filter: FlipH;                 /* IE 6/7/8 */
+}
+.inline-block{
+  display: inline-block;
 }
 
 .section-header {
@@ -123,7 +151,7 @@ h3 {
   @extend .img-responsive;
 }
 .post-footer {
-  border-top: 1px solid $gray-lighter;
+  //border-top: 1px solid $gray-lighter;
   padding-top: $space-sm;
   margin-bottom: $space-md;
 }
@@ -162,8 +190,8 @@ h3 {
 }
 
 .sidebar {
-  margin: 1em;
-  font-size: 75%; 
+  margin: 1em 0px 1em 0px;
+  font-size: 75%;
   line-height: 1.5em;
 }
 

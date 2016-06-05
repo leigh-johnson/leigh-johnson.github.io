@@ -479,7 +479,7 @@ $pager-disabled-color:                 #fff;
 //
 //##
 
-$jumbotron-padding:              30px;
+$jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit;
 $jumbotron-bg:                   $gray-lighter;
 $jumbotron-heading-color:        inherit;

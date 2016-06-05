@@ -150,4 +150,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (>= 25)
   jekyll-haml
-  jekyll-tagging (= 0.4.0)
+  jekyll-tagging
+
+BUNDLED WITH
+   1.12.5

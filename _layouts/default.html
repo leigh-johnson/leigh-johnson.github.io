@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ "/stylesheets/shiori.css" | prepend:site.baseurl }}">
     <link rel="stylesheet" href="{{ "/stylesheets/pygments.css" | prepend:site.baseurl }}">
-    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend:site.baseurl }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico?v=3" | prepend:site.baseurl }}">
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
@@ -26,7 +26,7 @@
   {% else %}
     <div class="navbar navbar-inverse navbar-static-top">
   {% endif %}
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <div class="navbar-toggle-wrapper visible-xs">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
@@ -36,7 +36,6 @@
             </button>
           </div>
           <a href="{{ "/" | prepend:site.baseurl }}" class="navbar-brand">
-              <span><img src="{{site.brand}}" class="logo hidden-xs"/></span>
               {{ site.title }}</a>
         </div>
         <div class="collapse navbar-collapse js-navbar-collapse">
@@ -49,17 +48,17 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         {% if page.hide_sidebar or site.data.theme.hide_sidebar %}
           <div class="col-sm-12">
             {{ content }}
           </div>
         {% else %}
-          <div class="col-sm-8">
+          <div class="col-md-7">
             {{ content }}
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-5 col-lg-4 col-lg-offset-1">
             {% include sidebar.html %}
           </div>
         {% endif %}

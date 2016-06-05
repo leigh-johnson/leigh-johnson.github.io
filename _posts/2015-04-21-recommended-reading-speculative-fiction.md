@@ -6,15 +6,15 @@ hide_sidebar: true
 excerpt: "I've always been fond of models, especially the constucts of speculative fiction authors. "
 image: "covers/oryx-and-crake-margaret-atwood.jpg"
 comments: true
---- 
+---
 
-## I've always been fond of models. 
+## I've always been fond of models.
 
-When my mother and I relocated from the Bronx to upstate NY, I coped by building a Lego replica of my previous elementary school (it was a spaceship too - those years were cast from impressions of Bill Watterson's Calvin & Hobbes). 
+When my mother and I relocated from the Bronx to upstate NY, I coped by building a Lego replica of my previous elementary school (it was a spaceship too - those years were cast from impressions of Bill Watterson's Calvin & Hobbes).
 
 I process my world by sketching, graphing, and building facsimiles of it. It makes sense that I would have an affinity for authors who do the same: Speculative Fiction is a type of derivative model. The author extrapolates about how a model might present, usually to entice attention to the current climate.
 
-## But here's the challenge with scale-models: 
+## But here's the challenge with scale-models:
 
 <blockquote>
 <p>"One describes a tale best by telling the tale. You see? The way one describes a story, to
@@ -24,7 +24,7 @@ would be the territory, and thus would be perfectly accurate and perfectly usele
 <footer>Neil Gaiman, <cite title="The Mapmaker">The Mapmaker</cite></footer>
 </blockquote>
 
-There's natural tension when authors scaffold their model: how do you convincingly deconstruct culturally pervasive ideas, without boring your audience to indifference? Sue McGregor's "Consumerism as a Source of Structural Violence" has a much shorter reach than JG Ballard's "Kingdom Come", for example. Speculative fiction is an expressive way to point to a a piece of cultural structure. 
+There's natural tension when authors scaffold their model: how do you convincingly deconstruct culturally pervasive ideas, without boring your audience to indifference? Sue McGregor's "Consumerism as a Source of Structural Violence" has a much shorter reach than JG Ballard's "Kingdom Come", for example. Speculative fiction is an expressive way to point to a a piece of cultural structure.
 
 So, I would like to share a list of my favorite topical conversation starters. These are some of the titles I own (sometimes in multiplicate) to lend over and over again.
 
@@ -34,7 +34,7 @@ So, I would like to share a list of my favorite topical conversation starters. T
 
 ##### _Mental Healthcare Industry, DSM Criticism_
 
-"SQ" is merrily ludicrous. This short story is about a binary mental health scoring system. A Sanity Quotient score splits society into two categories: <50 SQ (Sane), >50 SQ (Insane). The diagnosis, re-education, segregation, and incarceration of insane people becomes the world's most lucrative and essential industry. 
+"SQ" is merrily ludicrous. This short story is about a binary mental health scoring system. A Sanity Quotient score splits society into two categories: <50 SQ (Sane), >50 SQ (Insane). The diagnosis, re-education, segregation, and incarceration of insane people becomes the world's most lucrative and essential industry.
 
 
 ## _The Circle_ - David Eggers (2013)
@@ -43,13 +43,13 @@ So, I would like to share a list of my favorite topical conversation starters. T
 
 ###### _Ubiquity & Reach of Big Data, Digital Privacy, Social Media Culture, Content Generation_
 
-David Eggers (author of _"A Heartbreaking Work of Staggering Genius"_) is not always subtle. The Circle is an unabashed satire about public/private ownership, transparency, and a skinner box of constant social feedback. The story is told in a highly conventional third-person narrative style. 
+David Eggers (author of _"A Heartbreaking Work of Staggering Genius"_) is not always subtle. The Circle is an unabashed satire about public/private ownership, transparency, and a skinner box of constant social feedback. The story is told in a highly conventional third-person narrative style.
 
-Some passages read like a product teaser ripped from [Ars Technica](http://arstechnica.com/). 
+Some passages read like a product teaser ripped from [Ars Technica](http://arstechnica.com/).
 
 <blockquote>
 <p>"You know how you finish a bag of chips and you hate yourself? You know you’ve done nothing good for yourself. That’s the same feeling, and you know it is, after some digital binge. You feel wasted and hollow and diminished."
-</p> 
+</p>
 <footer> Dave Eggers, <cite title="The Circle">The Circle</cite></footer>
 </blockquote>
 
@@ -59,9 +59,9 @@ Some passages read like a product teaser ripped from [Ars Technica](http://arste
 
 ##### Two Party System, Consumerism, Journalism & Media Conglomerates
 
-Spider Jerusalem is a vulgar, drug-addicted sci-fi journalist made in Hunter S. Thompson's image. Spider is overtly anti-authoritarian and his scathing reports dissect The City's amalgum of consumerism, violence, corrupt politicians, and exploitive free enterprises. 
+Spider Jerusalem is a vulgar, drug-addicted sci-fi journalist made in Hunter S. Thompson's image. Spider is overtly anti-authoritarian and his scathing reports dissect The City's amalgum of consumerism, violence, corrupt politicians, and exploitive free enterprises.
 
-Culture in The City is Balkanized by myriad religions and immmense class stratification. 
+Culture in The City is Balkanized by myriad religions and immmense class stratification.
 
 This comic is an unsettling barrage of surreal and so-real.
 
@@ -77,14 +77,14 @@ This comic is an unsettling barrage of surreal and so-real.
 
 <img src="/assets/covers/oryx-and-crake-margaret-atwood.jpg" class="col-md-3 pull-left" />
 
-The MaddAddam triology is an immense construction. 
+The MaddAddam triology is an immense construction.
 
 In _Oryx & Crake_, Atwood explores triumphs and forfeits of bioengineering. The narrative shifts between each side of an apocalyptic bioweapon event: before & after the "flood". This story follows a well-educated cast who live in an affluent corporate compound (a sharp nod to white flight)
 
 _The Year of the Flood_ also braids around sections of the same timeline, but focuses on pleebland characters. This a beautiful, humanist story is about very ugly subjects: cults, poverty, and brutality.
 
 <blockquote>
-<p>“Not real can tell us about real.” 
+<p>“Not real can tell us about real.”
 </p>
 <footer>Margaret Atwood, <cite title="Oryx and Crake">Oryx and Crake</cite></footer>
 </blockquote>
