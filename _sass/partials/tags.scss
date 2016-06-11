@@ -5,14 +5,20 @@
 
 .set-4{
   @extend .label;
-  @extend .label-warning;
+  @extend .label-danger;
+  background-color: #7186a4;
 
 }
 .set-3{
   @extend .label;
-  @extend .label-success;
+  @extend .label-primary;
+  background-color: #6c8ba5;
 }
-
+.set-2{
+  @extend .label;
+  @extend .label-primary;
+  background-color: #55a2aa;
+}
 .set-1{
   @extend .label;
   @extend .label-primary;

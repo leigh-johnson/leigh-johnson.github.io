@@ -139,15 +139,11 @@ TURN is the most expensive relay protocol, becauase it behaves as a data stream 
 
 I setup a fragile TURN (tcp:wormhole.leighjohnson.com:7001) and websocket rendevous (ws://wormhole.leighjohnson.me:7000) without much effort. I haven't been able to use either by passing options through the CLI, but they're working fine when I replace the hard-coded values in [magic-wormhole/src/wormhole/cli/public_relay.py](https://github.com/warner/magic-wormhole/blob/master/src/wormhole/cli/public_relay.py).
 
-The takeaway: PAKE crypto is a nifty way to ramp humans/devices into a more complex exchange. Some more use cases I think are worth exploring:
+The takeaway: PAKE is a nifty way to ramp humans/devices into a more complex exchange.
 
-1. Aggressively re-key communications between IoT devices
-2. Hand out digital swag at events, lottery style. A balanced PAKE challenge provides feedback for humans that is very similar to a scratch-card or door reveal.
-3. Verbal payment systems, where payment is issued and a new password is generated after a key agreement is satisfied.
 
 ## References
 
-1. [Move Things From One Computer to Another, Safely by Brian Warner](http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf)
-2. [Magic Wormhole: Simple Secure File Transfer - PyCon 2016](https://www.youtube.com/watch?v=dgnikoiau68)
-3. [PAKE use cases @ Curves list](https://moderncrypto.org/mail-archive/curves/2015/000408.html)
+1. Move Things From One Computer to Another, Safely by Brian Warner [slides](http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf) [video](https://www.youtube.com/watch?v=dgnikoiau68)
+2. [PAKE use cases @ Curves list](https://moderncrypto.org/mail-archive/curves/2015/000408.html)
 
