@@ -113,7 +113,7 @@ New libraries and toolkits to check out:
 [slides](http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf)
 [video](https://www.youtube.com/watch?v=dgnikoiau68)
 
-My favorite talk! I wrote a long-form response to this one on the plane home, where I write about using Magic Wormhole to fasicilate multisignature Bitcoin trasactions. Read more: [PyCon2016 - Down the Magic Wormhole](/pycon2016-down-the-magic-wormhole/)
+My favorite talk! I wrote a long-form response to this one on the plane home, where I write about using Magic Wormhole to fasicilate multisignature Bitcoin trasactions. Read more: [PyCon2016 - Down the Magic Wormhole](/pycon2016-down-the-magic-wormhole)
 
 ## Revitalizing Python Game Development: Packaging, Performance, and Platforms - Jacob Kovac
 
