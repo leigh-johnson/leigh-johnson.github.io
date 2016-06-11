@@ -121,11 +121,11 @@ My favorite talk! I wrote a long-form response to this one on the plane home, wh
 
 [Kivy](https://kivy.org/#home) is a library close to my heart.
 
-I don't have any formal education or background in computer science. While slinging lattes, I finished the first pilot of edx.org's [MITx 6.00 series](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-7). While perspiring through that MOOC, I gravitated towards was Kivy when I realized I had the knowledge and tools to begin building my own games. In a month, I coded [a helper app](https://github.com/leigh-johnson/MAFIA) for my favorite party game, Mafia.
+I don't have any formal education or background in computer science. I slung lattes and perspired through the first pilot of edx.org's [MITx 6.00 series](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-7). While working through that MOOC, I gravitated towards was Kivy when I realized I had the knowledge and tools to begin building my own games. In a month, I coded [a helper app](https://github.com/leigh-johnson/MAFIA) for my favorite party game, Mafia.
 
 Kivy provides cross-platform interfaces to common mobile features, like multi-touch, gestures, cameras, accelerometers. When I was a new programmer, Kivy obscured just enough complexity to allow me to cobble together high-level logic to drive a Mafia game.
 
-I squee'd aloud when I heard Kivy now supports Python 3 (if you don't package for iOS). Expect my next blog post to be a writeup describing a 2D game engine, like a [Die2Nite](http://www.die2nite.com/) clone or clone of a card-based game like [Arboretum](https://boardgamegeek.com/boardgame/140934/arboretum) or [Mottainai](https://boardgamegeek.com/boardgame/175199/mottainai).
+I squee'd aloud when I heard Kivy now supports Python 3 (if you don't package for iOS). Expect my next blog post to be a writeup describing a 2D game engine, like a [Die2Nite](http://www.die2nite.com/) clone or an online implementation of card-based game like [Arboretum](https://boardgamegeek.com/boardgame/140934/arboretum) or [Mottainai](https://boardgamegeek.com/boardgame/175199/mottainai).
 
 I strongly believe that game development space in Python is perfect for engaging with new programmers. Kivy's toolchain and API are a triumph in simple usage, which is an area larger engines like Unity/Unreal/Crytek/Gamemaker etc struggle with. Having spent time in the games industry, I know that onboarding a gameplay designer to one of these engines takes months and months. I transitioned to brewing double espressos to brewing my own game in under thirty days, which is remarkable, and made entirely possible by Kivy.
 
