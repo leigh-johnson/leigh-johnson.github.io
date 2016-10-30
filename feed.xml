@@ -1,30 +1,1084 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Psychonaut in Cyberspace</title>
+    <description></description>
+    <link>http://blog.leighjohnson.me/</link>
+    <atom:link href="http://blog.leighjohnson.me/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 30 Oct 2016 13:27:35 -0400</pubDate>
+    <lastBuildDate>Sun, 30 Oct 2016 13:27:35 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>GHC 2016 - components of a transformative experience</title>
+        <description>&lt;h1 id=&quot;ill-remember-grace-hopper-2016-for-rest-of-my-life&quot;&gt;I’ll remember Grace Hopper 2016 for rest of my life.&lt;/h1&gt;
+
+&lt;p&gt;Before I can break down &lt;b&gt;the why&lt;/b&gt; of this event’s staggering impact on me, I’ll need to establish a little more context about the baggage I hauled onto the plane - and I’m not referring to my carry-on tote.&lt;/p&gt;
+
+&lt;p&gt;First, let’s quickly reflect on how people become who they are. You represent the sum total of a complicated and unique series of addends: your experiences. All of us might occupy similar present space, but the expressions through which we arrive at that summand are our uniquly our own.&lt;/p&gt;
+
+&lt;blockquote&gt;“Everybody is identical in their secret unspoken belief that way deep down they are different from everyone else.”
+&lt;footer&gt;David Foster Wallace, Infinite Jest&lt;/footer&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In a professional setting, by design, teams share common goals. We want to &lt;b&gt;arrive at the same ends&lt;/b&gt;, and &lt;b&gt;need each other&lt;/b&gt; to do so. However, each individual will naturally traverse a different path towards shared objectives. Keeping many perspectives in sync requires &lt;b&gt;practice&lt;/b&gt; and constant &lt;b&gt;care&lt;/b&gt;. Often, it’s necessary to introduce new processes that guide team members in engaging with contrasting points of view.&lt;/p&gt;
+
+&lt;figure class=&quot;col-md-6&quot;&gt;
+&lt;h3&gt;Homogenous teams&lt;/h3&gt;
+&lt;img class=&quot;img-responsive col-xs-10&quot; src=&quot;/assets/ghc-2016/beziers-synced.gif&quot; /&gt;
+&lt;ul class=&quot;col-xs-10&quot;&gt;
+	&lt;li&gt;Make decisions in lockstep, better coordination&lt;/li&gt;
+	&lt;li&gt;Spend less energy interpreting each other&lt;/li&gt;
+	&lt;li&gt;Low interpersonal friction&lt;/li&gt;
+	&lt;li&gt;Less innovation &lt;a href=&quot;https://www.sciencedaily.com/releases/2014/03/140319085430.htm&quot;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;col-md-6&quot;&gt;
+&lt;h3&gt;Heterogeneous teams&lt;/h3&gt;
+&lt;img class=&quot;img-responsive col-xs-10&quot; src=&quot;/assets/ghc-2016/beziers-unsynced.gif&quot; /&gt;
+&lt;ul class=&quot;col-xs-10&quot;&gt;
+	&lt;li&gt;Must cultivate openness to opposing opinions&lt;/li&gt;
+	&lt;li&gt;Spend more energy interpreting each other&lt;/li&gt;
+	&lt;li&gt;High potential for interpersonal friction&lt;/li&gt;
+	&lt;li&gt;Complimentary intelligences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;dearth-of-inclusive-practices&quot;&gt;Dearth of inclusive practices&lt;/h1&gt;
+
+&lt;div class=&quot;col-xs-12 clearfix&quot;&gt;
+What happens if we are not proactive about solidifying inclusive policies? What are the consequences of opaque or ad-hoc processes?  Kate Heddleston delivered a &lt;a href=&quot;https://www.youtube.com/watch?v=kNke_4WOWAU&quot;&gt;diversity talk at Pycon 2015&lt;/a&gt;, which introduces the concept of a&lt;b&gt;Null Process&lt;/b&gt;:
+
+&lt;blockquote&gt;
+&lt;p&gt;When people say they don&#39;t want process, what they&#39;re really saying is they don&#39;t want formalized process. There is really no such thing as &quot;no process.&quot; A process is simply the steps it takes to complete a task, so if a task is completed then by definition a process was used. Without formalized process everyone does things their own way. This informal, undocumented process can have major implications for a company.&lt;/p&gt;
+
+&lt;p&gt;It is almost impossible to evaluate bias in a null process. Everyone has unconscious biases and expectations, whether we mean to or not, and these biases can harm our perception of people&#39;s credibility. Unconscious biases are thought to be the source of a lot of the gender and race discrimination that happens at companies. &lt;/p&gt;
+&lt;footer&gt;Kate Heddleston, &lt;a href=&quot;https://kateheddleston.com/blog/the-null-process&quot;&gt;The Null Process&lt;/a&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;col-md-7&quot;&gt;&lt;p&gt;Policies need not be unwieldy. Tremendous progress can be made by publishing and normalizing recruiting practices. &lt;a href=&quot;https://www.npmjs.com/policies/recruiting-process&quot;&gt;NPM&lt;/a&gt; provides a great example of how to make hiring process more accessible, paying attention to &lt;b&gt;language&lt;/b&gt; in recruitment materials. I cringe every time a recruiting manager calls me a &lt;b&gt;unicorn&lt;/b&gt; or a job description targets &lt;b&gt;rock star engineers&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;Avoid forcing minorities to become their own ambassadors and champions, unless they have specifically asked for that role. It&#39;s not the job of your first minority hires to single-handedly tear down or navigate the environmental blockages in your company. By implementing inclusive directives &lt;b&gt;before&lt;/b&gt; a catastrophic event, your company demonstrates your commitment and buy-in to solving a tough problem. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-3 col-md-offset-2 hidden-sm hidden-xs clearfix&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/ghc-2016/unicorn.png&quot; /&gt;
+&lt;code&gt; # end sarcasm block &lt;/code&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;major-implications-information-passdown&quot;&gt;Major implications: information passdown&lt;/h3&gt;
+
+&lt;div class=&quot;row&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;col-md-7&quot;&gt;&lt;p&gt;
+When processes are unstructured, they take on an ad-hoc, social flavor. Employees must gather data about performance expectations, peer perception, and their tech stack through osmosis. Without a framework, onboarding and passdown can become an act of assimilation rather than guided instruction.&lt;/p&gt;
+
+&lt;p&gt;If there is any friction or communication breakdown between team members, ad-hoc processes might grind to a halt and leave individuals without the resources needed to be performant in their roles. Be proactive about scaffolding support and communication systems between team members and teams. Listen to concerns about inadquate processes and do not attribute environmental problems to individuals. It is &lt;b&gt;everyone&#39;s&lt;/b&gt; responsibility to propagate a healthly, inclusive setting. It is not a waste of time to trial (just try!) process-building to help individuals be more successful. &lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;For everyone to have the opportunity to be involved in a given group and to participate in its activities the structure must be explicit, not implicit. The rules of decision-making must be open and available to everyone, and this can happen only if they are formalized.
+&lt;/p&gt;
+&lt;footer&gt;The Tyranny of Structurelessness, Jo Freeman&lt;/footer&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-4 col-md-offset-1 hidden-sm hidden-xs&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/ghc-2016/kate-heddleston-sneetches.jpeg&quot; /&gt;
+&lt;footer&gt;&lt;a href=&quot;http://www.barnabasministry.com/quotes-sneeches.html&quot;&gt;The Sneetches, by Dr. Seuss&lt;/a&gt;&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;major-implications-non-constructive-feedback&quot;&gt;Major implications: non-constructive feedback&lt;/h3&gt;
+
+&lt;div class=&quot;col-md-6&quot;&gt;
+&lt;p&gt;Second only to biased hiring pipelines, receiving &lt;b&gt;quality feedback&lt;/b&gt; is an area where minorities suffer in the workplace. Two years ago, Kieran Snyder ran a &lt;a href=&quot;http://fortune.com/2014/08/26/performance-review-gender-bias/&quot;&gt;small study&lt;/a&gt; comparing the rate at which men and women in technology receive critical feedback in performance reviews.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“You can come across as abrasive sometimes. I know you don’t mean to, but you need to pay attention to your tone.”&lt;/p&gt;
+
+&lt;p&gt;“Your peers sometimes feel that you don’t leave them enough room. Sometimes you need to step back to let others shine.”&lt;/p&gt;
+&lt;footer&gt;Samples of negative personality criticism targeted towards women in performance reviews&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This subject is a close and personal one. Over the years, I&#39;ve received critical feedback indicating I:&lt;/p&gt;
+
+&lt;ul col=&quot;col-md-6&quot;&gt;
+	&lt;li&gt;Need to speak up more&lt;/li&gt;
+	&lt;li&gt;Need to speak up less&lt;/li&gt;
+	&lt;li&gt;Hijack projects&lt;/li&gt;
+	&lt;li&gt;Use an abrasive tone&lt;/li&gt;
+	&lt;li&gt;Speak too authoratively&lt;/li&gt;
+	&lt;li&gt;Need to be more gentle, less negative&lt;/li&gt;
+	&lt;li&gt;Intimidate team members&lt;/li&gt;
+	&lt;li&gt;Should focus on letting team mates shine&lt;/li&gt;
+&lt;/ul&gt;
+Some of these critiques are fair, some are not, and &lt;b&gt;none&lt;/b&gt; are helpful in building an empowering environment &lt;b&gt;for everyone&lt;/b&gt;.
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img class=&quot;img-responsive col-md-6&quot; src=&quot;/assets/ghc-2016/critical-feedback.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;what-does-all-of-this-have-to-do-with-attending-grace-hoppper&quot;&gt;What does all of this have to do with attending Grace Hoppper?&lt;/h1&gt;
+
+&lt;div class=&quot;col-md-8&quot;&gt;My personal exeriences became epistemic. &lt;b&gt;Every&lt;/b&gt; woman I spoke to - and I talked myself hoarse - could tell stories eerily similar to mine. It&#39;s one thing to be statistically aware of a problem. It&#39;s another witness &lt;b&gt;every single woman&lt;/b&gt; in a session hall to raise her had and confess &quot;Yeah, I get that a lot too - here&#39;s how to start a conversation about it.&quot;
+
+GHC melted years of compounded isolation in three days.
+
+&lt;blockquote&gt;
+&lt;p&gt;There are these two young fish swimming along, and they happen to meet an older fish swimming the other way, who nods at them and says, &quot;Morning, boys, how&#39;s the water?&quot; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes, &quot;What the hell is water?&quot;&lt;/p&gt;
+&lt;p&gt;“Learning how to think” really means learning how to exercise some control over how and what you think. It means being conscious and aware enough to choose what you pay attention to and to choose how you construct meaning from experience.&lt;/p&gt;
+&lt;footer&gt;David Foster Wallace, &quot;This is Water&quot;, 2005 Kenyon commencement speech&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I spent eight months living in Galesburg, Illinois, a nexus of railroad freight. &lt;i&gt;&quot;A train rolls through every 7 minutes, 365 days a year&quot;&lt;/i&gt; was a factoid touted by locals [CITATION NEEDED]. After two weeks, I stopped waking up each time a train whistle puctured the otherwise-silent rural nights. After a month, I stopped noticing the earthquake rumblings and hydraulic shrieks altogether.&lt;/p&gt;
+
+&lt;p&gt;We compose a mental default that tunes out and accepts our surroundings. We adapt to and are molded by our environments. We frame our experiences to stay happy, sane, and healthy. Starting a conversation about the mental acrobatics we do daily is not easy, but it is important. How else can we start accomodating each other a little more, every day?&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;col-md-4&quot;&gt;
+&lt;video class=&quot;col-md-12&quot; controls=&quot;&quot;&gt;
+  &lt;source src=&quot;/assets/ghc-2016/so-many-women.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+&lt;footer class=&quot;top-buffer text-center&quot;&gt;15,000 attendees! &lt;b&gt;Warning&lt;/b&gt;: loud, choppy audio&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;closing-photo-highlights-&quot;&gt;Closing: photo highlights :)&lt;/h1&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;figure class=&quot;col-md-5&quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/janette-epps.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;&lt;i&gt;&quot;Role models: my mother. She thought that educating yourself was the way to go. If you educated yourself, you never had to worry about anything.&quot;&lt;/i&gt; - Jeanette Epps&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/selfies.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;Yeah, we took a lot of selfies.&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/hands.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;Temporary tats @ the Red Hat booth&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row top-buffer&quot;&gt;
+&lt;figure class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/capture-the-flag.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;Hacker competition: capture the flag&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;col-md-3 &quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/lite-bright.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;Giant. Lite. Bright.&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;col-md-5&quot;&gt;
+&lt;img src=&quot;/assets/ghc-2016/dance-party.jpg&quot; /&gt;
+&lt;footer class=&quot;top-buffer&quot;&gt;BEYONCE ALL NIGHT ^O^&lt;/footer&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 29 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/grace-hopper-2016</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/grace-hopper-2016</guid>
+        
+        <category>GHC2016</category>
+        
+        <category>feminism</category>
+        
+        <category>women in technology</category>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>PyCon 2016: There and Back Again</title>
+        <description>&lt;div class=&quot;col-sm-4 pull-right&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/pycon2016/worlds-largest-foucaults-pendulum.jpg&quot; /&gt;
+&lt;footer&gt;&lt;small&gt;I didn&#39;t know it at the time, but Portland&#39;s Convention Center houses the world&#39;s largest Foucault&#39;s Pendulum. Every day, we stared upwards and puzzled over the mechanism powering this fixture. Suggestions ranged from: magic, motors, magnets. Turns out it&#39;s the Earth&#39;s rotation! The angular velocity of the pendulum&#39;s precession on its plane is a projection of the Earth&#39;s own angular velocity. &lt;/small&gt;&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;a-path-paved-by-serendipity&quot;&gt;A path paved by serendipity&lt;/h2&gt;
+
+&lt;p&gt;The kindness of another Ansible engineer made it possible for me to attend PyCon2016. He couldn’t make it, and graciously he offered me his ticket. I wasn’t sure if I’d be allowed to go until mere days before the conference began. I received clearance, booked my flight, and packed a bag in a span so short that I thought it must be a dream sequence. The randomness of life usually doesn’t muster so neatly, right?&lt;/p&gt;
+
+&lt;p&gt;First, I need to say that PyCon2016 is the best conference I’ve ever attended.&lt;/p&gt;
+
+&lt;p&gt;PyCon was unlike any conference I worked while in the video games industry (PAX, ECGC, GDC). In the past, I’ve been one small person in a throng of 70,000+. At ~3,200 attendees, PyCon felt warm and familial. I asked everyone I met “how do you know each other?” and received responses that mapped across many years and shared projects.&lt;/p&gt;
+
+&lt;p&gt;At booths in the games industry, I &lt;strong&gt;hustled&lt;/strong&gt;: try the demo, register for an account, tell a friend! At Ansible’s PyCon booth, I &lt;strong&gt;listened&lt;/strong&gt;. In three days, users described to me elaborate menageries of systems managed by Ansible automation. I was floored by the enthusiasm of most engineers I talked to. The fresh adopters were most ecstatic: so many were pleasantly surprised that their problem took hours, not days, to solve to their satisfaction.&lt;/p&gt;
+
+&lt;h2 id=&quot;talks&quot;&gt;Talks&lt;/h2&gt;
+
+&lt;p&gt;I attended about half a dozen talks in three days, and queued up more for the plane ride home. I spent a lot of time furiously Googling. Stream of consciousness reactions and tangential research below.&lt;/p&gt;
+
+&lt;h2 id=&quot;machete-mode-debugging---ned-batchelder&quot;&gt;Machete-mode debugging - Ned Batchelder&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://nedbatchelder.com/text/machete.html&quot;&gt;video, transcription, slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Embrace ephemeral code. Don’t be afraid to write jank to isolate a problem and extract information about it.&lt;/li&gt;
+  &lt;li&gt;You probably don’t need to append to sys.path.&lt;/li&gt;
+  &lt;li&gt;importing a Python module will also execute it&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://docs.python.org/2/library/inspect.html]&quot;&gt;inspect&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;inspect&lt;/code&gt; is a nifty module in the Python standard lib that I hadn’t used before. The talk cited an example where &lt;code&gt;inspect.stack&lt;/code&gt; was used to a inspect a call stack find the source of a double-imported module. &lt;code&gt;inspect.stack&lt;/code&gt; wraps &lt;code&gt;inspect.getouterframes(sys._getframe(depth))&lt;/code&gt; where &lt;code&gt;depth&lt;/code&gt; is the contextual level passed to &lt;code&gt;inspect.stack&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Monkey patch via &lt;code&gt;site-packages/*.pth&lt;/code&gt; to ensure patch is applied before the function is called&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;pdb.set_trace()&lt;/code&gt; can be used inside of a trace function. Ned’s example and one of my experiments below:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# break if the 0th element of sys.path endswith &amp;#39;/lib&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/lib&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pdb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# return a reference to iself in scope, or another function to further trace this scope&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trace&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# That&amp;#39;s neat, but what can we do with the frame and event arguments?&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This inspects the name of the code object executed in each frame&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;traceMyFuncNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;call&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;calling function: {0}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;return&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;returning function: {0}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f_code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;traceMyFuncNames&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settrace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traceMyFuncNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Followup talk: &lt;a href=&quot;http://nedbatchelder.com/text/trace-function.html&quot;&gt;How C trace functions really work&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;networking-without-an-os---josh-triplett&quot;&gt;Networking without an OS - Josh Triplett&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=AlkKvetGFSk&quot;&gt;video&lt;/a&gt;
+&lt;a href=&quot;https://speakerdeck.com/pycon2016/josh-triplett-networking-without-an-os&quot;&gt;slides&lt;/a&gt;
+&lt;a href=&quot;https://biosbits.org/&quot;&gt;BIOS Implementation Test Suite (BITS)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I attended this one because I have a pet interest in projects that run Python on bare metal. I started building small programs to run on a &lt;a href=&quot;https://www.indiegogo.com/projects/the-wipy-the-internet-of-things-of-the-future#/&quot;&gt;WiPy&lt;/a&gt;, which is a microcontroller running a port of &lt;a href=&quot;http://docs.micropython.org/en/latest/wipy/index.html&quot;&gt;MicroPython&lt;/a&gt;. Although I can write code and execute it on a WiPy, I don’t have a strong fundamental understanding of how MicroPython works, especially because each port seems specific to the given board’s architecture.&lt;/p&gt;
+
+&lt;p&gt;About 95% of this talk went way over my head. But here are my entry-level info bullets:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BITS runs on 32-bit BIOS or 64-bit EFI&lt;/li&gt;
+  &lt;li&gt;Underpinning tech: possible to run Python 2.7 in GRUB 2 by adding Python’s source files into GRUB’s build system.&lt;/li&gt;
+  &lt;li&gt;Custom &lt;code&gt;pyconfig.h&lt;/code&gt; to declare which features are available (exclude all requiring an OS)&lt;/li&gt;
+  &lt;li&gt;Parsing overhead reduced by using Python bytecode&lt;/li&gt;
+  &lt;li&gt;Interface to EFI provided via &lt;a href=&quot;https://sourceware.org/libffi/&quot;&gt;libffi&lt;/a&gt;. The “extensible” in “EFI” means you can create protocols using native C. &lt;code&gt;libffi&lt;/code&gt; is packaged with &lt;code&gt;ctypes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;small-batch-artisanal-bots-lets-make-friends---elizabeth-uselton&quot;&gt;Small Batch Artisanal Bots: Let’s Make Friends - Elizabeth Uselton&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HH6bD29gZFg&quot;&gt;partial video only :(&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Using microprojects to stitch together fundamental concepts, with a quick/fun outcome. These Twitter bots are freakin’ adorable.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/stealthmountain&quot;&gt;@stealthmountain&lt;/a&gt; - alerts tweeters when they’ve typed “sneak peak” instead of “sneak peek”&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/viralhulk&quot;&gt;@viralhulk&lt;/a&gt; - retweets BuzzFeed articles in HULK SMASH speak&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/FBIbot&quot;&gt;@FBIbot&lt;/a&gt; - tweets random pages from Freedom of Information Act releases&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;a-beginners-guide-to-deep-learning---irene-chen&quot;&gt;A Beginner’s Guide to Deep Learning - Irene Chen&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=d5tFV3lmUXE&quot;&gt;video&lt;/a&gt;
+&lt;a href=&quot;https://speakerdeck.com/pycon2016/irene-chen-a-beginners-guide-to-deep-learning&quot;&gt;slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;col-sm-4 pull-right&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/pycon2016/more-math-pls.png&quot; /&gt;
+&lt;footer&gt;&lt;small&gt;I wish there&#39;d been a LOT more coverage on the math used to calculate weights/bias in a hidden layer.&lt;/small&gt;&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I’ve been working through the problem sets in &lt;a href=&quot;https://www.manning.com/books/machine-learning-in-action&quot;&gt;Machine Learning in Action&lt;/a&gt; for about six weeks, but that’s the extent of my exposure to machine learning (let alone deep learning networks).&lt;/p&gt;
+
+&lt;p&gt;This was the most accessible talk on deep learning that I’ve ever heard. Irene started very high-level (on the subject of avocados), and within five minutes transitioned her audience into examples of forward and backward propagation.&lt;/p&gt;
+
+&lt;p&gt;New libraries and toolkits to check out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://scikit-learn.org/stable/&quot;&gt;Scikit-learn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BVLC/caffe&quot;&gt;Caffe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;move-things-from-one-computer-to-another-safely---brian-warner&quot;&gt;Move Things From One Computer to Another, Safely - Brian Warner&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf&quot;&gt;slides&lt;/a&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=dgnikoiau68&quot;&gt;video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My favorite talk! I wrote a long-form response to this one on the plane home, where I write about using Magic Wormhole to fasicilate multisignature Bitcoin trasactions. Read more: &lt;a href=&quot;/pycon2016-down-the-magic-wormhole&quot;&gt;PyCon2016 - Down the Magic Wormhole&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;revitalizing-python-game-development-packaging-performance-and-platforms---jacob-kovac&quot;&gt;Revitalizing Python Game Development: Packaging, Performance, and Platforms - Jacob Kovac&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=z09_Z2VG2_8&quot;&gt;video&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kivy.org/#home&quot;&gt;Kivy&lt;/a&gt; is a library close to my heart.&lt;/p&gt;
+
+&lt;p&gt;I don’t have any formal education or background in computer science. I slung lattes and perspired through the first pilot of edx.org’s &lt;a href=&quot;https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-7&quot;&gt;MITx 6.00 series&lt;/a&gt;. While working through that MOOC, I gravitated towards was Kivy - this library made me realize I possessed the knowledge and tools to begin building my own games. In a month, I coded &lt;a href=&quot;https://github.com/leigh-johnson/MAFIA&quot;&gt;a helper app&lt;/a&gt; for my favorite party game, Mafia.&lt;/p&gt;
+
+&lt;p&gt;Kivy provides cross-platform interfaces to common mobile features, like multi-touch, gestures, cameras, accelerometers. When I was a new programmer, Kivy obscured just enough complexity to allow me to cobble together high-level logic to drive a Mafia game.&lt;/p&gt;
+
+&lt;p&gt;I squee’d aloud when I heard Kivy now supports Python 3 (if you don’t package for iOS). Expect my next blog post to be a writeup describing a 2D game engine, like a &lt;a href=&quot;http://www.die2nite.com/&quot;&gt;Die2Nite&lt;/a&gt; clone or an online implementation of card-based game like &lt;a href=&quot;https://boardgamegeek.com/boardgame/140934/arboretum&quot;&gt;Arboretum&lt;/a&gt; or &lt;a href=&quot;https://boardgamegeek.com/boardgame/175199/mottainai&quot;&gt;Mottainai&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I strongly believe that game development space in Python is perfect for engaging with new programmers. Kivy’s toolchain and API are a triumph in simple usage, which is an area larger engines like Unity/Unreal/Crytek/Gamemaker etc struggle with. Having spent time in the games industry, I know that onboarding a gameplay designer to one of these engines takes months and months. I transitioned to brewing double espressos to brewing my own game in under thirty days, which is remarkable, and made entirely possible by Kivy.&lt;/p&gt;
+
+&lt;p&gt;So, I closed my PyCon experience with a nod back to the library that originally inspired me to create cool things and pursue work as engineer. The feedback loop goes ever on and on~&lt;/p&gt;
+</description>
+        <pubDate>Fri, 10 Jun 2016 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/pycon2016-there-and-back-again</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/pycon2016-there-and-back-again</guid>
+        
+        <category>pycon2016</category>
+        
+        <category>python</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>PyCon 2016: Down the Magic Wormhole</title>
+        <description>&lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;col-sm-4 pull-right&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/magic-wormhole/easy-vs-safe.png&quot; alt=&quot;source: Move Things From One Computer to Another, Safely by Brian Warner&quot; /&gt;
+&lt;footer&gt;&lt;small&gt;source: &lt;a href=&quot;http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf&quot;&gt;Move Things From One Computer to Another, Safely by Brian Warner&lt;/a&gt;&lt;/small&gt;&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;why-magic-wormhole&quot;&gt;Why Magic Wormhole?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/warner/magic-wormhole/&quot;&gt;Magic Wormhole&lt;/a&gt; is the first library I’ve encounted that fasciliates p2p file transfer using a human-utterable keying phrase. Other common patterns depend on committing 60+ bytes to human memory (or use a third-party shortening service for brevity). Brian Warner describes his library as the intersection between “easy” and “safe.”&lt;/p&gt;
+
+&lt;h2 id=&quot;example-useage-two-factor-bitcoin-wallet&quot;&gt;Example useage: two-factor bitcoin wallet&lt;/h2&gt;
+&lt;p&gt;I maintain one bitcoin address on my laptop, and another on a Raspberry Pi Zero. I keep my funds in a multi-signature wallet signed by both, which means both devices must issue a signature to finalize a transaction.&lt;/p&gt;
+
+&lt;p&gt;First, I initiate and sign the bitcoin transaction from my laptop. Then, I use Magic Wormhole to easily forward the transaction identity over to my Pi. Receiving the 34+ byte string is as easy as uttering &lt;i&gt;“Nine. Bison. Jawbone.”&lt;/i&gt; After I receive the hex string on my Pi, I can sign finalize the transaction.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;laptop&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bitcoin-cli signrawtransaction  some_hexstring &amp;lt;params&amp;gt;
+laptop&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole send --text some_hexstring
+Sending text message &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt; bytes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+On the other computer, please run: wormhole receive
+Wormhole code is 9-bison-jawbone&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pi&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole receive
+Enter receive wormhole code: 9-bison-jawbone
+some_hexstring
+pi&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bitcoin-cli signrawtransaction some_hextstring &amp;lt;params&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;example-useage-three-way-bitcoin-escrow&quot;&gt;Example useage: three-way bitcoin escrow&lt;/h2&gt;
+
+&lt;p&gt;Bob commissions Alice to provision a private Hello Kitty Island Adventure game server. They both agree to use a mutual acquitance, Carol, as an escrow arbiter for this transaction.&lt;/p&gt;
+
+&lt;p&gt;Bob and Alice provide their public bitcoin addresses to Carol. Carol generates a 2-of-3 multisignature address using the signatures received from Bob and Alice, plus her own. Carol broadcasts the 2-of-3 address to Alice and Bob.&lt;/p&gt;
+
+&lt;p&gt;All three parties are now cognizant of the escrow address. When the transaction is signed by any 2 parties, it will be broadcasted to the blockchain.&lt;/p&gt;
+
+&lt;p&gt;Magic Wormhole supports out-of-band keying. Bob, Alice, and Carol can select an unused channel ID and use it to broadcast/receive with the &lt;code&gt;--code&lt;/code&gt; argument.&lt;/p&gt;
+
+&lt;h4 id=&quot;alice-and-bob-broadcasting-their-wallet-addresses-to-carol&quot;&gt;Alice and Bob broadcasting their wallet addresses to Carol&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bob&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole send --text bob_hexstring --code 1-tonic-willow
+Sending text message &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt; bytes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;alice&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole send --text alice_hexstring --code 2-cublic-filament
+Sending text message &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt; bytes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;carol&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole receive
+Enter receive wormhole code: 1-tonic-willow
+&amp;lt;bob_hexstring&amp;gt;
+carol&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole receive
+Enter receive wormhole code: 2-cubic-filament
+&amp;lt;alice_hexstring&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;carol-broadcasting-the-2-of-3-address-to-alice-and-bob&quot;&gt;Carol broadcasting the 2-of-3 address to Alice and Bob&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;carol&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole send --text 2_of_3_hexstring --code 1-willow-tonic
+Sending text message &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt; bytes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+carol&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole send --text 2_of_3_hexstring --code 2-filament-cubic
+Sending text message &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34&lt;/span&gt; bytes&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;alice&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole receive
+Enter receive wormhole code: 2-willow-tonic
+&amp;lt;2_of_3_hexstring&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight width-65&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bob&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wormhole receive
+Enter receive wormhole code: 2-filament-cubic
+&amp;lt;2_of_3_hexstring&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;neat-how-does-it-work&quot;&gt;Neat. How does it work?&lt;/h2&gt;
+
+&lt;p&gt;PAKE &amp;amp; SPAKE2 use a weak shared password to derive a much stronger shared secret key. If both sides input the same password, both sides can anticipate receiving the same key. If either side inputs a password failing the challenge, the received keys will be random.&lt;/p&gt;
+
+&lt;p&gt;Brian Warner mentioned SPAKE2 strongly resembles a basic DH exchange, which gave me a stronger grasp of what’s happening going on stage right. Here’s my crack at solving a drastically over-simplified version of this problem:&lt;/p&gt;
+
+&lt;div class=&quot;col-sm-5 pull-right&quot;&gt;
+&lt;img class=&quot;img-responsive&quot; src=&quot;/assets/magic-wormhole/spake2.png&quot; alt=&quot;source: Move Things From One Computer to Another, Safely by Brian Warner&quot; /&gt;
+&lt;footer&gt;&lt;small&gt;Probably Magic. &lt;br /&gt;Source: &lt;a href=&quot;http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf&quot;&gt;Move Things From One Computer to Another, Safely by Brian Warner&lt;/a&gt;&lt;/small&gt;&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# pseudocode: easier than latex&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# pw - password phrase in bytecode&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# p is a pre-agreed prime&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# g is a generator of some kind&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# H() - a hash function&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# X1, Y1 - scaler multiplication of the random entropy onto the generator&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# X2, Y2 - result of X/Y1 added to the scaler multiplication of the password bytecode onto some arbitrary points&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# M, N - some arbitrary points&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# P, Q - the propositions&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scalarMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urandom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urandom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;X1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Y1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# this is probably not the right way to negate a constant, send help!&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;P&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;M&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalerMult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;One of these things is not like the other&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;key_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;key_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;what-does-a-selfsame-session-key-do&quot;&gt;What does a selfsame session key do?&lt;/h2&gt;
+
+&lt;p&gt;All subsequent communications between the two clients are encrypted using this key. After the keying step, the clients attempt to forge a connection.&lt;/p&gt;
+
+&lt;p&gt;Each client will listen to a set of TCP ports and also broadcast on a range of ports. The first successful response to a client’s key challenge will initiate the next connection step.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-what-if-either-client-is-behind-a-nat&quot;&gt;But what if either client is behind a NAT?&lt;/h2&gt;
+
+&lt;p&gt;Magic Wormhole direct connections through a TURN server, which allows a client behind a NAT to request that the server act as relay.  The server relays packets on the behalf of the client to and from peers.&lt;/p&gt;
+
+&lt;p&gt;TURN is the most expensive relay protocol, becauase it behaves as a data stream between peers. Brian Warner has generously provided the address of both his own TURN for file transfers, and the websocket service used during the keying phase.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-to-from-here&quot;&gt;Where to from here?&lt;/h2&gt;
+
+&lt;p&gt;I setup a fragile TURN (tcp:wormhole.leighjohnson.com:7001) and websocket rendevous (ws://wormhole.leighjohnson.me:7000) without much effort. I haven’t been able to use either by passing options through the CLI, but they’re working fine when I replace the hard-coded values in &lt;a href=&quot;https://github.com/warner/magic-wormhole/blob/master/src/wormhole/cli/public_relay.py&quot;&gt;magic-wormhole/src/wormhole/cli/public_relay.py&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The takeaway: PAKE is a nifty way to ramp humans/devices into a more complex exchange.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Move Things From One Computer to Another, Safely by Brian Warner &lt;a href=&quot;http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf&quot;&gt;slides&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=dgnikoiau68&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://moderncrypto.org/mail-archive/curves/2015/000408.html&quot;&gt;PAKE use cases @ Curves list&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Sat, 04 Jun 2016 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/pycon2016-down-the-magic-wormhole</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/pycon2016-down-the-magic-wormhole</guid>
+        
+        <category>pycon2016</category>
+        
+        <category>python</category>
+        
+        <category>cryptography</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to: Bootstrap a Raspberry Pi</title>
+        <description>&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;div class=&quot;col-md-6&quot;&gt;&lt;p&gt;This guide will walk you through a headless (no monitor, keyboard, mouse) Raspberry Pi setup.&lt;/p&gt;&lt;p&gt; We&#39;ll cover materials, installation, bootstrap a WiFi connection, and optionally configure a hostname &amp;amp; static IP.&lt;/p&gt; &lt;/div&gt;
+&lt;p&gt;&lt;img class=&quot;thumbnail col-md-5&quot; src=&quot;/assets/headless-raspberry-pi/scale.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#overview&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#gather-the-mats&quot;&gt;Gather the Materials&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#hardware&quot;&gt;Hardware&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#software&quot;&gt;Software&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#write-raspbian-image&quot;&gt;Write Raspbian Image to Mico SD Card&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bootstrap-raspbian&quot;&gt;Bootstrap Raspbian Settings&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#configure-wifi-connection&quot;&gt;Configure a WiFi connection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#connect-to-wifi-automatically&quot;&gt;Automatically connect WiFi interface&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#change-pis-hostname-optional&quot;&gt;Change Pi’s hostname&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#assign-static-ip-optional&quot;&gt;Assign a static IP&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;gather-the-mats&quot;&gt;Gather the Mats&lt;/h2&gt;
+
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Raspberry Pi. 
+&lt;small&gt; &lt;a href=&quot;https://www.adafruit.com/pizero&quot;&gt;model Zero via Adafruit&lt;/a&gt;&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;Micro SD Card&lt;/li&gt;
+  &lt;li&gt;Micro USB cable&lt;/li&gt;
+  &lt;li&gt;USB Micro SD card reader/writer. 
+  &lt;small&gt;Mine &lt;a href=&quot;https://www.adafruit.com/product/939&quot;&gt;via Adafruit&lt;/a&gt;.&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;Micro USB Male to USB A Female adaptor. 
+&lt;small&gt;Mine &lt;a href=&quot;http://www.amazon.com/Micro-USB-Male-Female-Adapter/dp/B0027YYMU6&quot;&gt;via Amazon&lt;/a&gt;&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;USB Wifi dongle
+  &lt;small&gt;Mine &lt;a href=&quot;https://www.adafruit.com/products/814&quot;&gt;via Adafruit&lt;/a&gt;. &lt;/small&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;software&quot;&gt;Software&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/downloads/raspbian/&quot;&gt;Latest Raspbian release&lt;/a&gt;
+  &lt;br /&gt;&lt;small&gt;I’m using Raspbian Jessie Lite, which is a headless distro. This Raspbian image is small because GUI libraries/programs (like X) aren’t included by default. Jessie Lite will fit on a &lt;strong&gt;2GB SD card&lt;/strong&gt;, but the desktop image will require at &lt;strong&gt;least 4GB of space**.&lt;/strong&gt; &lt;/small&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;write-raspbian-image&quot;&gt;Write Raspbian Image&lt;/h2&gt;
+
+&lt;p&gt;Raspberry Pi provides official guides for each operating system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/linux.md&quot;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/mac.md&quot;&gt;OS X&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/windows.md&quot;&gt;Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bootstrap-raspbian&quot;&gt;Bootstrap Raspbian&lt;/h2&gt;
+
+&lt;p&gt;How you mount the Raspbian filesystem and edit files also depends on your operating system.&lt;/p&gt;
+
+&lt;h3 id=&quot;windows--os-x-instructions---todo&quot;&gt;Windows &amp;amp; OS X Instructions - @todo&lt;/h3&gt;
+&lt;p&gt;### Linux Instructions&lt;/p&gt;
+
+&lt;h4 id=&quot;configure-wifi-connection&quot;&gt;Configure WiFi connection&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Run command &lt;code&gt;df -h&lt;/code&gt; to list filesystem info.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    /dev/sdb2       7.2G  831M  6.1G  12% /media/userName/c7f58a52-6b71
+/dev/sdb1        60M   20M   41M  34% /media/userName/boot
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the root filesystem, which is &lt;code&gt;/media/userName/c7f58a52-6b71&lt;/code&gt; in the example above.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nano etc/wpa_supplicant/wpa_supplicant.conf&lt;/code&gt; to edit the WPA supplicant config.&lt;/li&gt;
+  &lt;li&gt;Add the following config:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;network&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;ssid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Network_SSID&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;psk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;yourPassword&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ctrl+X and press Y to save.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;connect-to-wifi-automatically&quot;&gt;Connect to Wifi automatically&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;nano etc/network/interfaces&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add &lt;code&gt;auto wlan0&lt;/code&gt; to the first line of this file.&lt;/li&gt;
+  &lt;li&gt;If you want to use DHCP, append the following to the bottom of this file. Or, &lt;a href=&quot;#assign-static-ip-optional&quot;&gt;assign a static IP&lt;/a&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ctrl+X and press Y to save.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;change-pis-hostname-optional&quot;&gt;Change Pi’s hostname (optional)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;nano etc/hosts&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  127.0.0.1       localhost
+&lt;span class=&quot;c&quot;&gt;#The following config should be used for IPv6&lt;/span&gt;
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+&lt;span class=&quot;c&quot;&gt;#Raspberry Pi&amp;#39;s new host name&lt;/span&gt;
+127.0.1.1       newhostname
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ctrl+X and press Y to save.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nano etc/hostname&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;   newhostname
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ctrl+X and press Y to save.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;assign-static-ip&quot;&gt;Assign Static IP&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;ifconfig -a&lt;/code&gt; from a machine connected to the same Wifi network, or from a Pi currently using DHCP.&lt;/li&gt;
+  &lt;li&gt;Take note of &lt;strong&gt;inet addr&lt;/strong&gt;, &lt;strong&gt;Bcast&lt;/strong&gt;, and &lt;strong&gt;Mask&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;route -n&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Take note of the &lt;strong&gt;Gateway Address&lt;/strong&gt; and &lt;strong&gt;Destination Address&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nano etc/network/interfaces&lt;/code&gt; and add the following:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;allow-hotplug wlan0
+iface wlan0 inet static
+    address &amp;lt;desired IP address&amp;gt;
+    netmask &amp;lt;Mask&amp;gt;
+    broadcast &amp;lt;Bcast&amp;gt;
+    network &amp;lt;destination address&amp;gt;
+    gateway &amp;lt;gateway address&amp;gt;
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;unmout-the-micro-sd-card-and-boot-up-the-raspberry-pi&quot;&gt;Unmout the Micro SD card and boot up the Raspberry Pi!&lt;/h2&gt;
+
+&lt;p&gt;The default password is &lt;i&gt;raspberry&lt;/i&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh pi@raspberrypi
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;c&quot;&gt;# If you don&amp;#39;t have a nameserver, use the Pi&amp;#39;s IP.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# You can find the Pi&amp;#39;s IP in your router&amp;#39;s DHCP lease list&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Or setup a static IP&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh pi@10.11.12.13
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And you’re ready to go! I recommend running &lt;code&gt;sudo apt-get update&lt;/code&gt; &amp;amp; &lt;code&gt;sudo apt-get upgrade&lt;/code&gt;, then setup key-based authentication and user accounts.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 09 Dec 2015 00:00:00 -0500</pubDate>
+        <link>http://blog.leighjohnson.me/how-to-bootstrap-raspberry-pi</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/how-to-bootstrap-raspberry-pi</guid>
+        
+        <category>RaspberryPi</category>
+        
+        <category>linux</category>
+        
+        <category>IoT</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Grokking Three.js: Cloth Animations</title>
+        <description>&lt;link href=&quot;/assets/threejs-cloth/styles/styles.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+    &lt;/div&gt;
+      &lt;h1&gt; A quick demonstration - &lt;small&gt;writeup soon!&lt;/small&gt;&lt;/h1&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;h1 class=&quot;col-md-6&quot;&gt; Choose a pattern:&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row controls&quot;&gt;
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img class=&quot;active&quot; src=&quot;/assets/threejs-cloth/images/pattern-1.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-2.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-3.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-4.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-5.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-6.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-7.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-8.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;col-md-1&quot;&gt;
+            &lt;div class=&quot;thumbnail&quot;&gt;
+              &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;/assets/threejs-cloth/images/pattern-9.png&quot; /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div id=&quot;canvas-wrapper&quot; class=&quot;col-md-7&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;h1&gt; Rotation:&lt;/h1&gt;
+      &lt;div class=&quot;btn-group&quot; role=&quot;group&quot;&gt;
+        &lt;button class=&quot;btn btn-default btn-lg rotate&quot; data-direction=&quot;left&quot; data-container=&quot;body&quot; data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; data-content=&quot;&quot;&gt;
+          &lt;span class=&quot;fa fa-reply&quot;&gt;&lt;/span&gt;
+         &lt;/button&gt;
+        &lt;button class=&quot;btn btn-default btn-lg rotate&quot;&gt;
+          &lt;span class=&quot;fa fa-pause&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;active btn-default btn btn-lg rotate&quot; data-direction=&quot;right&quot;&gt;
+          &lt;span class=&quot;fa fa-share&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;x-shader/x-fragment&quot; id=&quot;fragmentShaderDepth&quot;&gt;
+      uniform sampler2D texture;
+      varying vec2 vUV;
+
+      vec4 pack_depth( const in float depth ) {
+
+      const vec4 bit_shift = vec4( 256.0 * 256.0 * 256.0, 256.0 * 256.0, 256.0, 1.0 );
+      const vec4 bit_mask  = vec4( 0.0, 1.0 / 256.0, 1.0 / 256.0, 1.0 / 256.0 );
+      vec4 res = fract( depth * bit_shift );
+      res -= res.xxyz * bit_mask;
+      return res;
+
+      }
+
+      void main() {
+
+      vec4 pixel = texture2D( texture, vUV );
+
+      if ( pixel.a &lt; 0.5 ) discard;
+
+      gl_FragData[ 0 ] = pack_depth( gl_FragCoord.z );
+
+      }
+&lt;/script&gt;
+
+&lt;!--
+    // GLSL vertex shader 
+    // http://threejs.org/examples/#webgl_animation_cloth
+    --&gt;
+&lt;script type=&quot;x-shader/x-fragment&quot; id=&quot;vertexShaderDepth&quot;&gt;
+
+      varying vec2 vUV;
+
+      void main() {
+
+      vUV = 0.75 * uv;
+
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+      gl_Position = projectionMatrix * mvPosition;
+
+      }
+&lt;/script&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/assets/threejs-cloth/js/cloth.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/assets/threejs-cloth/js/main.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 07 Dec 2015 00:00:00 -0500</pubDate>
+        <link>http://blog.leighjohnson.me/grokking-threejs-cloth-animations</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/grokking-threejs-cloth-animations</guid>
+        
+        <category>three.js</category>
+        
+        <category>javascript</category>
+        
+        <category>webgl</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Building an LED music visualizer on a Raspberry Pi - Assemble the Mats</title>
+        <description>&lt;h1 id=&quot;design-goals&quot;&gt;Design Goals&lt;/h1&gt;
+
+&lt;p&gt;This project began with fanciful dreams of an RX controller+receiver set (see: &lt;a href=&quot;https://en.wikipedia.org/wiki/Reactive_programming&quot;&gt;reactive programming&lt;/a&gt;) that parses an audio stream for data, transforms the dataset, runs tests against the transformed data to determine callback parameters, and then emits a message to the WS281x API.&lt;/p&gt;
+
+&lt;p&gt;This sort of RX design would allow humans (or machines) to drop in rules about musical data patterns, like using a pre-defined RGB palette in a certain key or modifying a hue transition scaler when the data steam is above a threshold in the time domain (e.g. BPM &amp;gt; 90).&lt;/p&gt;
+
+&lt;h1 id=&quot;v1-spec&quot;&gt;v1 Spec&lt;/h1&gt;
+
+&lt;p&gt;First, I’ll need to build a working hardware environment and a controller+receiver pattern.&lt;/p&gt;
+
+&lt;h3 id=&quot;base-case-high-level-summary&quot;&gt;Base Case (high level summary)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A strip of LEDs mapped to Raspberry Pi GPIO&lt;/li&gt;
+  &lt;li&gt;A controller application that emits web socket messages&lt;/li&gt;
+  &lt;li&gt;A high level wrapper around the WS281x spec + Raspberry Pi PWM&lt;/li&gt;
+  &lt;li&gt;A receiver application that subscribes to web socket messages, whose callbacks are using WS281x API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A very basic example might allow the client/controller to set RGB values via CLI, which will push an event to a WSGI wrapper around the ws281x API.&lt;/p&gt;
+
+&lt;h1 id=&quot;hardware&quot;&gt;Hardware&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;WS2812 LED Strip, like &lt;a href=&quot;http://www.adafruit.com/products/1376&quot;&gt;NeoPixel RGB White 30 via Adafruit&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;3V to 5V level shifter &lt;a href=&quot;http://www.adafruit.com/products/1787&quot;&gt;74HCT125 via Adafruit&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Female/Male jumper wires&lt;/li&gt;
+  &lt;li&gt;Male/Male jumper wires&lt;/li&gt;
+  &lt;li&gt;Breadboard, like &lt;a href=&quot;http://www.adafruit.com/products/64&quot;&gt;half board via Adafruit&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Power supply. I’m using &lt;a href=&quot;http://www.adafruit.com/products/1466&quot;&gt;5V 4A (4000mA) via Adafruit&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Power Jack &lt;a href=&quot;http://www.adafruit.com/products/368&quot;&gt;via Adafruit&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Raspberry Pi 2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/blog/raspberry-leaf/&quot;&gt;Raspberry Leaf&lt;/a&gt; reference sheet. This is going to save me so many silly mistakes over the course of this project!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;libraries--apis&quot;&gt;Libraries &amp;amp; APIs&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://socket.io/&quot;&gt;Socket.io&lt;/a&gt; will handle pub/sub patterns between the controller and receiver.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/richardghirst/rpi_ws281x&quot;&gt;rpi_ws281x&lt;/a&gt; - both a &lt;a href=&quot;https://github.com/richardghirst/rpi_ws281x/blob/master/python/examples/lowlevel.py&quot;&gt;SWIG-generated interface&lt;/a&gt; and &lt;a href=&quot;https://github.com/richardghirst/rpi_ws281x/blob/master/python/examples/strandtest.py&quot;&gt;high level API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;research-inspiration-references&quot;&gt;Research, inspiration, references&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;NeoPixels + Raspberry Pi &lt;a href=&quot;https://learn.adafruit.com/neopixels-on-raspberry-pi/software&quot;&gt;via Adafruit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hardware build is sourced from &lt;a href=&quot;http://popoklopsi.github.io/RaspberryPi-LedStrip/#/ws2812&quot;&gt;this excellent tutorial&lt;/a&gt;, which will satisfy the hardware component of our base case.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/&quot;&gt;Understanding the FFT algorithm (Python)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/604453/analyze-audio-using-fast-fourier-transform/604756#604756&quot;&gt;Analyzing audio using FFT &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Reactive-Extensions/RxPy&quot;&gt;RxPY&lt;/a&gt; - a RX extensions in Python&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 20 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/how-to-led-music-visualizer-raspberry-pi</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/how-to-led-music-visualizer-raspberry-pi</guid>
+        
+        <category>raspberrypi</category>
+        
+        <category>neopixels</category>
+        
+        <category>python</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to setup &amp; configure a multiboot environment on OS X</title>
+        <description>&lt;h2 id=&quot;why-should-i-multiboot&quot;&gt;Why should I multiboot?&lt;/h2&gt;
+
+&lt;p&gt;Machines are expensive! If you need to test a product against multiple versions of OS X, it’s VERY costly to purchase an Apple computer per unique configuration.&lt;/p&gt;
+
+&lt;p&gt;Multiboot is a powerful tool for both developers &amp;amp; quality assurance testers, and it’s very easy to setup.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-do-i-get-started&quot;&gt;How do I get started?&lt;/h2&gt;
+
+&lt;p&gt;First, you should figure out which versions of OS X you’re going to support.&lt;/p&gt;
+
+&lt;p&gt;This tutorial assumes you already have an Apple computer and a valid install of OS X. These instructions were written using 10.10.3 for reference.&lt;/p&gt;
+
+&lt;h3 id=&quot;download-all-os-x-installer-packages&quot;&gt;Download all OS X installer packages&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the &lt;strong&gt;App Store&lt;/strong&gt; &amp;amp; browse to the &lt;strong&gt;Purchases&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Download the versions of OS X you’ll need. If you see an error that prompts &lt;em&gt;Would you like to continue?&lt;/em&gt;, press continue.&lt;/li&gt;
+  &lt;li&gt;If your current version of OS X is ahead of the one you just downloaded, you’ll see an error: &lt;em&gt;This copy of “Install OS X” application is too old to be opened on this version of OS X&lt;/em&gt;. Dismiss this error by pressing the quit button.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;partition-the-hdd-part-1&quot;&gt;Partition the HDD (Part 1)&lt;/h3&gt;
+
+&lt;p&gt;While the installer packages are downloading, partition your HDD.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the &lt;code&gt;Disk Utility&lt;/code&gt; tool.&lt;/li&gt;
+  &lt;li&gt;In the left-hand column, you’ll see a list of hard drives &amp;amp; partitions. Select the &lt;code&gt;APPLE HDD&lt;/code&gt; or the top-most mount point in the tree. &lt;strong&gt;DO NOT&lt;/strong&gt; select &lt;code&gt;Macintosh HD&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Browse to the &lt;code&gt;Partition&lt;/code&gt; tab. You should see a partition layout. From this list of partitions, select &lt;code&gt;Macintosh HD&lt;/code&gt;  and then use the &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt; to add a partition.&lt;/li&gt;
+  &lt;li&gt;Under &lt;code&gt;Partition Information&lt;/code&gt;, choose a name for your new partition. I recommend naming each partition after the OS version it’ll house, e.g. “10.8 Mountain Lion”&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Repeat steps 4-5 until you have one partition for each OS you need to install, &lt;strong&gt;plus one more partition&lt;/strong&gt;. So if you need to install 2 additional OS versions, create 3 partitions.&lt;/li&gt;
+  &lt;li&gt;Name the final partition &lt;code&gt;InstallVolume&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;mount-the-installers-part-2&quot;&gt;Mount the Installers (Part 2)&lt;/h3&gt;
+
+&lt;p&gt;Wait for the OS X installers to finish downloading before proceeding.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open the &lt;strong&gt;Applications&lt;/strong&gt; folder &amp;amp; find “Install OS X {Version}.app”&lt;/li&gt;
+  &lt;li&gt;Right-click the .app and select **Show Package Contents”&lt;/li&gt;
+  &lt;li&gt;Browse to &lt;code&gt;Contents/SharedSupport&lt;/code&gt; and double-click &lt;code&gt;InstallESD.dmg&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open the &lt;code&gt;Terminal&lt;/code&gt; and enter the following commands:&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles YES&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;killall Finder&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;When &lt;code&gt;InstallESD.dmg&lt;/code&gt; is done mounting, you should see an entry under the &lt;code&gt;Devices&lt;/code&gt; menu called &lt;code&gt;OS X Install ESD&lt;/code&gt;. Open it.&lt;/li&gt;
+  &lt;li&gt;You should see a greyed-out file called &lt;code&gt;BaseSystem.dmg&lt;/code&gt;. Right-click it &amp;amp; &lt;strong&gt;Open With&lt;/strong&gt; &lt;code&gt;DiskImageMounter.app&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;write-the-installers-to-installvolume-part-3&quot;&gt;Write the Installers to InstallVolume (Part 3)&lt;/h3&gt;
+
+&lt;p&gt;Is your HDD done partitioning yet? Wait for it to finish before proceeding.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In the &lt;code&gt;Disk Utility&lt;/code&gt; tool, select &lt;code&gt;InstallVolume&lt;/code&gt; from the left-hand list.&lt;/li&gt;
+  &lt;li&gt;Browse to the &lt;code&gt;Restore&lt;/code&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Ensure the &lt;strong&gt;Source&lt;/strong&gt; is already &lt;code&gt;InstallVolume&lt;/code&gt;!&lt;/li&gt;
+  &lt;li&gt;You should see &lt;code&gt;BaseSystem.dmg&lt;/code&gt; in the list of images on the left. Drag &lt;code&gt;BaseSystem.dmg&lt;/code&gt; (&lt;strong&gt;DO NOT&lt;/strong&gt; drag &lt;code&gt;OS X Base System&lt;/code&gt;) into the &lt;code&gt;Destination&lt;/code&gt; field on the right.&lt;/li&gt;
+  &lt;li&gt;Press restore.&lt;/li&gt;
+  &lt;li&gt;When the write is done, the &lt;code&gt;InstallVolume&lt;/code&gt;’s name’ will change to &lt;code&gt;OS X Base System&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;install-the-os-x-version-part-4&quot;&gt;Install the OS X Version (Part 4)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reboot your Apple computer.&lt;/li&gt;
+  &lt;li&gt;On the grey bootloader screen, press &lt;code&gt;Option&lt;/code&gt;. You should see a list of available startup disks.&lt;/li&gt;
+  &lt;li&gt;Select &lt;code&gt;OS X Base System&lt;/code&gt; as the startup disk.&lt;/li&gt;
+  &lt;li&gt;Complete the OS X setup instructions. If you’ve gotten this far, you don’t need me to walk you through OS setup. &lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;repeat-parts-2-4-for-each-version-of-os-x-you-need-in-your-multiboot-environment-continue-re-using-the-os-x-base-system-partition-for-your-install-files&quot;&gt;Repeat Parts 2-4 for each version of OS X you need in your multiboot environment. Continue re-using the “OS X Base System” partition for your install files.&lt;/h3&gt;
+
+&lt;h3 id=&quot;you-can-set-the-default-startup-disk-via-system-preferences&quot;&gt;You can set the default startup disk via &lt;code&gt;system preferences&lt;/code&gt;&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 23 Apr 2015 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/how-to-setup-OSX-multiboot</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/how-to-setup-OSX-multiboot</guid>
+        
+        <category>osx</category>
+        
+        <category>sysadmin</category>
+        
+        <category>environments</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Recommended Reading: Speculative Fiction</title>
+        <description>&lt;h2 id=&quot;ive-always-been-fond-of-models&quot;&gt;I’ve always been fond of models.&lt;/h2&gt;
+
+&lt;p&gt;When my mother and I relocated from the Bronx to upstate NY, I coped by building a Lego replica of my previous elementary school (it was a spaceship too - those years were cast from impressions of Bill Watterson’s Calvin &amp;amp; Hobbes).&lt;/p&gt;
+
+&lt;p&gt;I process my world by sketching, graphing, and building facsimiles of it. It makes sense that I would have an affinity for authors who do the same: Speculative Fiction is a type of derivative model. The author extrapolates about how a model might present, usually to entice attention to the current climate.&lt;/p&gt;
+
+&lt;h2 id=&quot;but-heres-the-challenge-with-scale-models&quot;&gt;But here’s the challenge with scale-models:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&quot;One describes a tale best by telling the tale. You see? The way one describes a story, to
+oneself or to the world, is by telling the story. It is a balancing act and it is a dream. The
+more accurate the map, the more it resembles the territory. The most accurate map possible
+would be the territory, and thus would be perfectly accurate and perfectly useless&quot;&lt;/p&gt;
+&lt;footer&gt;Neil Gaiman, &lt;cite title=&quot;The Mapmaker&quot;&gt;The Mapmaker&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There’s natural tension when authors scaffold their model: how do you convincingly deconstruct culturally pervasive ideas, without boring your audience to indifference? Sue McGregor’s “Consumerism as a Source of Structural Violence” has a much shorter reach than JG Ballard’s “Kingdom Come”, for example. Speculative fiction is an expressive way to point to a a piece of cultural structure.&lt;/p&gt;
+
+&lt;p&gt;So, I would like to share a list of my favorite topical conversation starters. These are some of the titles I own (sometimes in multiplicate) to lend over and over again.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/covers/the-compass-rose-ursula-k-leguin.jpg&quot; class=&quot;col-md-3 pull-right img-rounded&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sq---ursula-k-le-guin-published-in-the-the-compass-rose-1982&quot;&gt;“SQ” - Ursula K. Le Guin (published in the &lt;em&gt;The Compass Rose&lt;/em&gt; 1982)&lt;/h2&gt;
+
+&lt;h5 id=&quot;mental-healthcare-industry-dsm-criticism&quot;&gt;&lt;em&gt;Mental Healthcare Industry, DSM Criticism&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;“SQ” is merrily ludicrous. This short story is about a binary mental health scoring system. A Sanity Quotient score splits society into two categories: &amp;lt;50 SQ (Sane), &amp;gt;50 SQ (Insane). The diagnosis, re-education, segregation, and incarceration of insane people becomes the world’s most lucrative and essential industry.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-circle---david-eggers-2013&quot;&gt;&lt;em&gt;The Circle&lt;/em&gt; - David Eggers (2013)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/covers/the-circle-david-eggers.jpeg&quot; class=&quot;col-md-3 pull-left img-rounded&quot; /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;ubiquity--reach-of-big-data-digital-privacy-social-media-culture-content-generation&quot;&gt;&lt;em&gt;Ubiquity &amp;amp; Reach of Big Data, Digital Privacy, Social Media Culture, Content Generation&lt;/em&gt;&lt;/h6&gt;
+
+&lt;p&gt;David Eggers (author of &lt;em&gt;“A Heartbreaking Work of Staggering Genius”&lt;/em&gt;) is not always subtle. The Circle is an unabashed satire about public/private ownership, transparency, and a skinner box of constant social feedback. The story is told in a highly conventional third-person narrative style.&lt;/p&gt;
+
+&lt;p&gt;Some passages read like a product teaser ripped from &lt;a href=&quot;http://arstechnica.com/&quot;&gt;Ars Technica&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&quot;You know how you finish a bag of chips and you hate yourself? You know you’ve done nothing good for yourself. That’s the same feeling, and you know it is, after some digital binge. You feel wasted and hollow and diminished.&quot;
+&lt;/p&gt;
+&lt;footer&gt; Dave Eggers, &lt;cite title=&quot;The Circle&quot;&gt;The Circle&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;transmetropolitan---warren-ellis--darick-robertson-1997-2002&quot;&gt;&lt;em&gt;Transmetropolitan&lt;/em&gt; - Warren Ellis &amp;amp; Darick Robertson (1997-2002)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/comics/transmetropolitan-election.jpg&quot; class=&quot;col-md-3 pull-right&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;two-party-system-consumerism-journalism--media-conglomerates&quot;&gt;Two Party System, Consumerism, Journalism &amp;amp; Media Conglomerates&lt;/h5&gt;
+
+&lt;p&gt;Spider Jerusalem is a vulgar, drug-addicted sci-fi journalist made in Hunter S. Thompson’s image. Spider is overtly anti-authoritarian and his scathing reports dissect The City’s amalgum of consumerism, violence, corrupt politicians, and exploitive free enterprises.&lt;/p&gt;
+
+&lt;p&gt;Culture in The City is Balkanized by myriad religions and immmense class stratification.&lt;/p&gt;
+
+&lt;p&gt;This comic is an unsettling barrage of surreal and so-real.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There&#39;s one hole in every revolution, large or small. And it&#39;s one word long— PEOPLE. No matter how big the idea they all stand under, people are small and weak and cheap and frightened. It&#39;s people that kill every revolution.
+&lt;/p&gt;
+&lt;footer&gt; Warren Ellis, &lt;cite title=&quot;Transmetropolitan&quot;&gt;Transmetropolitan&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;oryx-and-crake-maddaddam-1---margaret-atwood-2003&quot;&gt;&lt;em&gt;Oryx and Crake (MaddAddam #1)&lt;/em&gt; - Margaret Atwood (2003)&lt;/h2&gt;
+
+&lt;h5 id=&quot;transgenics--capitalism-suburban-flight-bioweapons-humanism&quot;&gt;Transgenics &amp;amp; Capitalism, Suburban Flight, Bioweapons, Humanism&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/covers/oryx-and-crake-margaret-atwood.jpg&quot; class=&quot;col-md-3 pull-left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The MaddAddam triology is an immense construction.&lt;/p&gt;
+
+&lt;p&gt;In &lt;em&gt;Oryx &amp;amp; Crake&lt;/em&gt;, Atwood explores triumphs and forfeits of bioengineering. The narrative shifts between each side of an apocalyptic bioweapon event: before &amp;amp; after the “flood”. This story follows a well-educated cast who live in an affluent corporate compound (a sharp nod to white flight)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The Year of the Flood&lt;/em&gt; also braids around sections of the same timeline, but focuses on pleebland characters. This a beautiful, humanist story is about very ugly subjects: cults, poverty, and brutality.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Not real can tell us about real.”
+&lt;/p&gt;
+&lt;footer&gt;Margaret Atwood, &lt;cite title=&quot;Oryx and Crake&quot;&gt;Oryx and Crake&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 21 Apr 2015 00:00:00 -0400</pubDate>
+        <link>http://blog.leighjohnson.me/recommended-reading-speculative-fiction</link>
+        <guid isPermaLink="true">http://blog.leighjohnson.me/recommended-reading-speculative-fiction</guid>
+        
+        <category>bookrec</category>
+        
+        <category>comics</category>
+        
+        
+      </item>
+    
   </channel>
 </rss>

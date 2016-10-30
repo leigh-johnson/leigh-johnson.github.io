@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/shiori.css">
+    <link rel="stylesheet" href="/stylesheets/pygments.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="canonical" href="http://blog.leighjohnson.me/pycon2016-down-the-magic-wormhole">
+    <link rel="shortcut icon" href="/favicon.ico?v=3">
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <title>PyCon 2016: Down the Magic Wormhole | Psychonaut in Cyberspace</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Additions to <head> tags go here. -->
+<meta content="Psychonaut in Cyberspace" property="og:site_name">
+
+  <meta content="PyCon 2016: Down the Magic Wormhole" property="og:title">
+
+<meta property="og:type" content="website" />
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Brian Warner created a PAKE-based exchange to unite two inbound TCP connections, and initiate an adhoc data transfer between them." property="og:description">
+
+
+  <meta content="http://blog.leighjohnson.me/pycon2016-down-the-magic-wormhole" property="og:url">
+
+
+  <meta content="2016-06-04T00:00:00-04:00" property="article:published_time">
+  <meta content="http://blog.leighjohnson.me" property="article:author">
+
+
+  <meta content="https://avatars3.githubusercontent.com/u/2601819?v=3&s=200" property="og:image">
+
+
+  
+
+
+  
+  <meta content="pycon2016" property="article:tag">
+  
+  <meta content="python" property="article:tag">
+  
+  <meta content="cryptography" property="article:tag">
+  
+
+
+  </head>
+  <body>
+  
+    <div class="navbar navbar-inverse navbar-static-top">
+  
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-toggle-wrapper visible-xs">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <a href="/" class="navbar-brand">
+              Psychonaut in Cyberspace</a>
+        </div>
+        <div class="collapse navbar-collapse js-navbar-collapse">
+          <ul class="navbar-nav nav">
+            <li><a href="/archive">Archive</a></li>
+
+          </ul>
+          <ul class="navbar-nav nav navbar-right">
+            <li>
+  <a href="https://github.com/leigh-johnson"><i class="fa fa-github-alt"></i></a>
+</li>
+<li>
+  <a href="https://twitter.com/grepLeigh"><i class="fa fa-twitter"></i></a>
+</li>
+<li>
+  <a href="https://keybase.io/grepleigh"><i class="fa fa-key"></i></a>
+</li>
+<li>
+  <a href="mailto:hi@leighjohnson.me"><i class="fa fa-envelope"></i></a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        
+          <div class="col-sm-12">
+            <div class="post-header">
+  <h1 class="post-title-main">PyCon 2016: Down the Magic Wormhole</h1>
+  <p class="text-muted">04 Jun 2016 <span> <a href="/tag/pycon2016/" rel="tag">pycon2016</a>, <a href="/tag/python/" rel="tag">python</a>, <a href="/tag/cryptography/" rel="tag">cryptography</a></span> <span class="pull-right">Reading time: about 6  minutes</span></p>
+
+</div>
+<div class="post-content">
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<div class="col-sm-4 pull-right">
+<img class="img-responsive" src="/assets/magic-wormhole/easy-vs-safe.png" alt="source: Move Things From One Computer to Another, Safely by Brian Warner" />
+<footer><small>source: <a href="http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf">Move Things From One Computer to Another, Safely by Brian Warner</a></small></footer>
+</div>
+
+<h2 id="why-magic-wormhole">Why Magic Wormhole?</h2>
+<p><a href="https://github.com/warner/magic-wormhole/">Magic Wormhole</a> is the first library I’ve encounted that fasciliates p2p file transfer using a human-utterable keying phrase. Other common patterns depend on committing 60+ bytes to human memory (or use a third-party shortening service for brevity). Brian Warner describes his library as the intersection between “easy” and “safe.”</p>
+
+<h2 id="example-useage-two-factor-bitcoin-wallet">Example useage: two-factor bitcoin wallet</h2>
+<p>I maintain one bitcoin address on my laptop, and another on a Raspberry Pi Zero. I keep my funds in a multi-signature wallet signed by both, which means both devices must issue a signature to finalize a transaction.</p>
+
+<p>First, I initiate and sign the bitcoin transaction from my laptop. Then, I use Magic Wormhole to easily forward the transaction identity over to my Pi. Receiving the 34+ byte string is as easy as uttering <i>“Nine. Bison. Jawbone.”</i> After I receive the hex string on my Pi, I can sign finalize the transaction.</p>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">laptop<span class="nv">$ </span>bitcoin-cli signrawtransaction  some_hexstring &lt;params&gt;
+laptop<span class="nv">$ </span>wormhole send --text some_hexstring
+Sending text message <span class="o">(</span><span class="m">34</span> bytes<span class="o">)</span>
+On the other computer, please run: wormhole receive
+Wormhole code is 9-bison-jawbone</code></pre></figure>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">pi<span class="nv">$ </span>wormhole receive
+Enter receive wormhole code: 9-bison-jawbone
+some_hexstring
+pi<span class="nv">$ </span>bitcoin-cli signrawtransaction some_hextstring &lt;params&gt;</code></pre></figure>
+
+<h2 id="example-useage-three-way-bitcoin-escrow">Example useage: three-way bitcoin escrow</h2>
+
+<p>Bob commissions Alice to provision a private Hello Kitty Island Adventure game server. They both agree to use a mutual acquitance, Carol, as an escrow arbiter for this transaction.</p>
+
+<p>Bob and Alice provide their public bitcoin addresses to Carol. Carol generates a 2-of-3 multisignature address using the signatures received from Bob and Alice, plus her own. Carol broadcasts the 2-of-3 address to Alice and Bob.</p>
+
+<p>All three parties are now cognizant of the escrow address. When the transaction is signed by any 2 parties, it will be broadcasted to the blockchain.</p>
+
+<p>Magic Wormhole supports out-of-band keying. Bob, Alice, and Carol can select an unused channel ID and use it to broadcast/receive with the <code>--code</code> argument.</p>
+
+<h4 id="alice-and-bob-broadcasting-their-wallet-addresses-to-carol">Alice and Bob broadcasting their wallet addresses to Carol</h4>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">bob<span class="nv">$ </span>wormhole send --text bob_hexstring --code 1-tonic-willow
+Sending text message <span class="o">(</span><span class="m">34</span> bytes<span class="o">)</span></code></pre></figure>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">alice<span class="nv">$ </span>wormhole send --text alice_hexstring --code 2-cublic-filament
+Sending text message <span class="o">(</span><span class="m">34</span> bytes<span class="o">)</span></code></pre></figure>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">carol<span class="nv">$ </span>wormhole receive
+Enter receive wormhole code: 1-tonic-willow
+&lt;bob_hexstring&gt;
+carol<span class="nv">$ </span>wormhole receive
+Enter receive wormhole code: 2-cubic-filament
+&lt;alice_hexstring&gt;</code></pre></figure>
+
+<h4 id="carol-broadcasting-the-2-of-3-address-to-alice-and-bob">Carol broadcasting the 2-of-3 address to Alice and Bob</h4>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">carol<span class="nv">$ </span>wormhole send --text 2_of_3_hexstring --code 1-willow-tonic
+Sending text message <span class="o">(</span><span class="m">34</span> bytes<span class="o">)</span>
+carol<span class="nv">$ </span>wormhole send --text 2_of_3_hexstring --code 2-filament-cubic
+Sending text message <span class="o">(</span><span class="m">34</span> bytes<span class="o">)</span></code></pre></figure>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">alice<span class="nv">$ </span>wormhole receive
+Enter receive wormhole code: 2-willow-tonic
+&lt;2_of_3_hexstring&gt;</code></pre></figure>
+
+<figure class="highlight width-65"><pre><code class="language-bash" data-lang="bash">bob<span class="nv">$ </span>wormhole receive
+Enter receive wormhole code: 2-filament-cubic
+&lt;2_of_3_hexstring&gt;</code></pre></figure>
+
+<h2 id="neat-how-does-it-work">Neat. How does it work?</h2>
+
+<p>PAKE &amp; SPAKE2 use a weak shared password to derive a much stronger shared secret key. If both sides input the same password, both sides can anticipate receiving the same key. If either side inputs a password failing the challenge, the received keys will be random.</p>
+
+<p>Brian Warner mentioned SPAKE2 strongly resembles a basic DH exchange, which gave me a stronger grasp of what’s happening going on stage right. Here’s my crack at solving a drastically over-simplified version of this problem:</p>
+
+<div class="col-sm-5 pull-right">
+<img class="img-responsive" src="/assets/magic-wormhole/spake2.png" alt="source: Move Things From One Computer to Another, Safely by Brian Warner" />
+<footer><small>Probably Magic. <br />Source: <a href="http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf">Move Things From One Computer to Another, Safely by Brian Warner</a></small></footer>
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># pseudocode: easier than latex</span>
+<span class="c"># pw - password phrase in bytecode</span>
+<span class="c"># p is a pre-agreed prime</span>
+<span class="c"># g is a generator of some kind</span>
+<span class="c"># H() - a hash function</span>
+<span class="c"># X1, Y1 - scaler multiplication of the random entropy onto the generator</span>
+<span class="c"># X2, Y2 - result of X/Y1 added to the scaler multiplication of the password bytecode onto some arbitrary points</span>
+<span class="c"># M, N - some arbitrary points</span>
+<span class="c"># P, Q - the propositions</span>
+
+<span class="k">def</span> <span class="nf">scalarMult</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[[</span><span class="n">n</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">A</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">X1</span> <span class="o">=</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">Y1</span> <span class="o">=</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">X2</span> <span class="o">=</span> <span class="n">X1</span> <span class="o">+</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">pw</span><span class="p">)</span>
+<span class="n">Y2</span> <span class="o">=</span> <span class="n">Y1</span> <span class="o">+</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">pw</span><span class="p">)</span>
+<span class="c"># this is probably not the right way to negate a constant, send help!</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">X2</span> <span class="o">+</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">pw</span><span class="p">)),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">Y2</span> <span class="o">+</span> <span class="n">scalerMult</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">pw</span><span class="p">)),</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">H</span><span class="p">(</span><span class="n">pw</span> <span class="o">+</span> <span class="n">X2</span> <span class="o">+</span> <span class="n">Y2</span> <span class="o">+</span> <span class="n">P</span><span class="p">)</span> <span class="o">==</span> <span class="n">H</span><span class="p">(</span><span class="n">pw</span> <span class="o">+</span> <span class="n">X2</span> <span class="o">+</span> <span class="n">Y2</span> <span class="o">+</span> <span class="n">Q</span><span class="p">),</span> <span class="s">&quot;One of these things is not like the other&quot;</span>
+<span class="n">key_1</span> <span class="o">=</span> <span class="n">H</span><span class="p">(</span><span class="n">pw</span> <span class="o">+</span> <span class="n">X2</span> <span class="o">+</span> <span class="n">Y2</span> <span class="o">+</span> <span class="n">P</span><span class="p">)</span>
+<span class="n">key_2</span> <span class="o">=</span> <span class="n">H</span><span class="p">(</span><span class="n">pw</span> <span class="o">+</span> <span class="n">X2</span> <span class="o">+</span> <span class="n">Y2</span> <span class="o">+</span> <span class="n">Q</span><span class="p">)</span></code></pre></figure>
+
+<h2 id="what-does-a-selfsame-session-key-do">What does a selfsame session key do?</h2>
+
+<p>All subsequent communications between the two clients are encrypted using this key. After the keying step, the clients attempt to forge a connection.</p>
+
+<p>Each client will listen to a set of TCP ports and also broadcast on a range of ports. The first successful response to a client’s key challenge will initiate the next connection step.</p>
+
+<h2 id="but-what-if-either-client-is-behind-a-nat">But what if either client is behind a NAT?</h2>
+
+<p>Magic Wormhole direct connections through a TURN server, which allows a client behind a NAT to request that the server act as relay.  The server relays packets on the behalf of the client to and from peers.</p>
+
+<p>TURN is the most expensive relay protocol, becauase it behaves as a data stream between peers. Brian Warner has generously provided the address of both his own TURN for file transfers, and the websocket service used during the keying phase.</p>
+
+<h2 id="where-to-from-here">Where to from here?</h2>
+
+<p>I setup a fragile TURN (tcp:wormhole.leighjohnson.com:7001) and websocket rendevous (ws://wormhole.leighjohnson.me:7000) without much effort. I haven’t been able to use either by passing options through the CLI, but they’re working fine when I replace the hard-coded values in <a href="https://github.com/warner/magic-wormhole/blob/master/src/wormhole/cli/public_relay.py">magic-wormhole/src/wormhole/cli/public_relay.py</a>.</p>
+
+<p>The takeaway: PAKE is a nifty way to ramp humans/devices into a more complex exchange.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Move Things From One Computer to Another, Safely by Brian Warner <a href="http://www.lothar.com/~warner/MagicWormhole-PyCon2016.pdf">slides</a> <a href="https://www.youtube.com/watch?v=dgnikoiau68">video</a></li>
+  <li><a href="https://moderncrypto.org/mail-archive/curves/2015/000408.html">PAKE use cases @ Curves list</a></li>
+</ol>
+
+
+</div>
+<div class="post-footer">
+  
+<div id="disqus_thread" class="col-md-12"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nuwen';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+  
+    <div class="post-navs row">
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Older
+            <span class="text-muted"> &middot; </span>
+            <a href="/archive">View Archive (8)</a>
+          </h3>
+          <h2 class="post-title-link"><a href="/how-to-bootstrap-raspberry-pi">How to: Bootstrap a Raspberry Pi</a></h2>
+          <p>This guide will walk you through a headless (no monitor, keyboard, mouse) Raspberry Pi setup, in under 15 minutes.</p>
+
+        </div>
+      
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Newer
+            
+          </h3>
+          <h2 class="post-title-link"><a href="/pycon2016-there-and-back-again">PyCon 2016: There and Back Again</a></h2>
+          <p>My first PyCon: a serendipitious story. Travel log, reactions to talks, and long-form hallway discussions.</p>
+
+        </div>
+      
+    </div>
+  
+
+
+          </div>
+        
+      </div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <!-- Feel free to remove this div. Uses purplecoat: http://ellekasai.github.io/purplecoat.js -->
+<div data-purplecoat="shiori" data-purplecoat-label="footer.html">
+&copy; <a href="http://leighhjohnson.me">Leigh Johnson</a> 2016.
+<a href="https://github.com/leigh-johnson/leigh-johnson.github.io/tree/source">Peep Source</a>. Built with <a href="http://jekyllrb.com/">Jekyll</a> and
+<a href="https://github.com/ellekasai/shiori">Shiori Theme</a>.
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69747414-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>

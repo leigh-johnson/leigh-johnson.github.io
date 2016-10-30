@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/shiori.css">
+    <link rel="stylesheet" href="/stylesheets/pygments.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="canonical" href="http://blog.leighjohnson.me/how-to-bootstrap-raspberry-pi">
+    <link rel="shortcut icon" href="/favicon.ico?v=3">
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <title>How to: Bootstrap a Raspberry Pi | Psychonaut in Cyberspace</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Additions to <head> tags go here. -->
+<meta content="Psychonaut in Cyberspace" property="og:site_name">
+
+  <meta content="How to: Bootstrap a Raspberry Pi" property="og:title">
+
+<meta property="og:type" content="website" />
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="This guide will walk you through a headless (no monitor, keyboard, mouse) Raspberry Pi setup, in under 15 minutes." property="og:description">
+
+
+  <meta content="http://blog.leighjohnson.me/how-to-bootstrap-raspberry-pi" property="og:url">
+
+
+  <meta content="2015-12-09T00:00:00-05:00" property="article:published_time">
+  <meta content="http://blog.leighjohnson.me" property="article:author">
+
+
+  <meta content="https://avatars3.githubusercontent.com/u/2601819?v=3&s=200" property="og:image">
+
+
+  
+
+
+  
+  <meta content="RaspberryPi" property="article:tag">
+  
+  <meta content="linux" property="article:tag">
+  
+  <meta content="IoT" property="article:tag">
+  
+
+
+  </head>
+  <body>
+  
+    <div class="navbar navbar-inverse navbar-static-top">
+  
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-toggle-wrapper visible-xs">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <a href="/" class="navbar-brand">
+              Psychonaut in Cyberspace</a>
+        </div>
+        <div class="collapse navbar-collapse js-navbar-collapse">
+          <ul class="navbar-nav nav">
+            <li><a href="/archive">Archive</a></li>
+
+          </ul>
+          <ul class="navbar-nav nav navbar-right">
+            <li>
+  <a href="https://github.com/leigh-johnson"><i class="fa fa-github-alt"></i></a>
+</li>
+<li>
+  <a href="https://twitter.com/grepLeigh"><i class="fa fa-twitter"></i></a>
+</li>
+<li>
+  <a href="https://keybase.io/grepleigh"><i class="fa fa-key"></i></a>
+</li>
+<li>
+  <a href="mailto:hi@leighjohnson.me"><i class="fa fa-envelope"></i></a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        
+          <div class="col-md-7">
+            <div class="post-header">
+  <h1 class="post-title-main">How to: Bootstrap a Raspberry Pi</h1>
+  <p class="text-muted">09 Dec 2015 <span> <a href="/tag/raspberrypi/" rel="tag">RaspberryPi</a>, <a href="/tag/linux/" rel="tag">linux</a>, <a href="/tag/iot/" rel="tag">IoT</a></span> <span class="pull-right">Reading time: about 3  minutes</span></p>
+
+</div>
+<div class="post-content">
+  <h2 id="overview">Overview</h2>
+
+<div class="col-md-6"><p>This guide will walk you through a headless (no monitor, keyboard, mouse) Raspberry Pi setup.</p><p> We'll cover materials, installation, bootstrap a WiFi connection, and optionally configure a hostname &amp; static IP.</p> </div>
+<p><img class="thumbnail col-md-5" src="/assets/headless-raspberry-pi/scale.jpg" /></p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#gather-the-mats">Gather the Materials</a>
+    <ol>
+      <li><a href="#hardware">Hardware</a></li>
+      <li><a href="#software">Software</a></li>
+    </ol>
+  </li>
+  <li><a href="#write-raspbian-image">Write Raspbian Image to Mico SD Card</a></li>
+  <li><a href="#bootstrap-raspbian">Bootstrap Raspbian Settings</a>
+    <ol>
+      <li><a href="#configure-wifi-connection">Configure a WiFi connection</a></li>
+      <li><a href="#connect-to-wifi-automatically">Automatically connect WiFi interface</a></li>
+      <li><a href="#change-pis-hostname-optional">Change Pi’s hostname</a></li>
+      <li><a href="#assign-static-ip-optional">Assign a static IP</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="gather-the-mats">Gather the Mats</h2>
+
+<h3 id="hardware">Hardware</h3>
+<ul>
+  <li>A Raspberry Pi. 
+<small> <a href="https://www.adafruit.com/pizero">model Zero via Adafruit</a></small></li>
+  <li>Micro SD Card</li>
+  <li>Micro USB cable</li>
+  <li>USB Micro SD card reader/writer. 
+  <small>Mine <a href="https://www.adafruit.com/product/939">via Adafruit</a>.</small></li>
+  <li>Micro USB Male to USB A Female adaptor. 
+<small>Mine <a href="http://www.amazon.com/Micro-USB-Male-Female-Adapter/dp/B0027YYMU6">via Amazon</a></small></li>
+  <li>USB Wifi dongle
+  <small>Mine <a href="https://www.adafruit.com/products/814">via Adafruit</a>. </small></li>
+</ul>
+
+<h3 id="software">Software</h3>
+<ul>
+  <li><a href="https://www.raspberrypi.org/downloads/raspbian/">Latest Raspbian release</a>
+  <br /><small>I’m using Raspbian Jessie Lite, which is a headless distro. This Raspbian image is small because GUI libraries/programs (like X) aren’t included by default. Jessie Lite will fit on a <strong>2GB SD card</strong>, but the desktop image will require at <strong>least 4GB of space**.</strong> </small></li>
+</ul>
+
+<h2 id="write-raspbian-image">Write Raspbian Image</h2>
+
+<p>Raspberry Pi provides official guides for each operating system:</p>
+
+<ul>
+  <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/linux.md">Linux</a></li>
+  <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/mac.md">OS X</a></li>
+  <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/windows.md">Windows</a></li>
+</ul>
+
+<h2 id="bootstrap-raspbian">Bootstrap Raspbian</h2>
+
+<p>How you mount the Raspbian filesystem and edit files also depends on your operating system.</p>
+
+<h3 id="windows--os-x-instructions---todo">Windows &amp; OS X Instructions - @todo</h3>
+<p>### Linux Instructions</p>
+
+<h4 id="configure-wifi-connection">Configure WiFi connection</h4>
+<ul>
+  <li>Run command <code>df -h</code> to list filesystem info.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    /dev/sdb2       7.2G  831M  6.1G  12% /media/userName/c7f58a52-6b71
+/dev/sdb1        60M   20M   41M  34% /media/userName/boot
+  </code></pre></figure>
+
+<ul>
+  <li><code>cd</code> into the root filesystem, which is <code>/media/userName/c7f58a52-6b71</code> in the example above.</li>
+  <li><code>nano etc/wpa_supplicant/wpa_supplicant.conf</code> to edit the WPA supplicant config.</li>
+  <li>Add the following config:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nv">network</span><span class="o">={</span>
+        <span class="nv">ssid</span><span class="o">=</span><span class="s2">&quot;Network_SSID&quot;</span>
+        <span class="nv">psk</span><span class="o">=</span><span class="s2">&quot;yourPassword&quot;</span>
+    <span class="o">}</span>
+  </code></pre></figure>
+
+<ul>
+  <li>Ctrl+X and press Y to save.</li>
+</ul>
+
+<h4 id="connect-to-wifi-automatically">Connect to Wifi automatically</h4>
+<ul>
+  <li><code>nano etc/network/interfaces</code></li>
+  <li>Add <code>auto wlan0</code> to the first line of this file.</li>
+  <li>If you want to use DHCP, append the following to the bottom of this file. Or, <a href="#assign-static-ip-optional">assign a static IP</a> instead.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+  </code></pre></figure>
+
+<ul>
+  <li>Ctrl+X and press Y to save.</li>
+</ul>
+
+<h4 id="change-pis-hostname-optional">Change Pi’s hostname (optional)</h4>
+
+<ul>
+  <li><code>nano etc/hosts</code></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  127.0.0.1       localhost
+<span class="c">#The following config should be used for IPv6</span>
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+<span class="c">#Raspberry Pi&#39;s new host name</span>
+127.0.1.1       newhostname
+  </code></pre></figure>
+
+<ul>
+  <li>Ctrl+X and press Y to save.</li>
+  <li><code>nano etc/hostname</code></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   newhostname
+  </code></pre></figure>
+
+<ul>
+  <li>Ctrl+X and press Y to save.</li>
+</ul>
+
+<h4 id="assign-static-ip">Assign Static IP</h4>
+<ul>
+  <li><code>ifconfig -a</code> from a machine connected to the same Wifi network, or from a Pi currently using DHCP.</li>
+  <li>Take note of <strong>inet addr</strong>, <strong>Bcast</strong>, and <strong>Mask</strong></li>
+  <li><code>route -n</code></li>
+  <li>Take note of the <strong>Gateway Address</strong> and <strong>Destination Address</strong>.</li>
+  <li><code>nano etc/network/interfaces</code> and add the following:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">allow-hotplug wlan0
+iface wlan0 inet static
+    address &lt;desired IP address&gt;
+    netmask &lt;Mask&gt;
+    broadcast &lt;Bcast&gt;
+    network &lt;destination address&gt;
+    gateway &lt;gateway address&gt;
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+  </code></pre></figure>
+
+<h2 id="unmout-the-micro-sd-card-and-boot-up-the-raspberry-pi">Unmout the Micro SD card and boot up the Raspberry Pi!</h2>
+
+<p>The default password is <i>raspberry</i>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span>ssh pi@raspberrypi
+  </code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="c"># If you don&#39;t have a nameserver, use the Pi&#39;s IP.</span>
+<span class="c"># You can find the Pi&#39;s IP in your router&#39;s DHCP lease list</span>
+<span class="c"># Or setup a static IP</span>
+<span class="nv">$ </span>ssh pi@10.11.12.13
+  </code></pre></figure>
+
+<p>And you’re ready to go! I recommend running <code>sudo apt-get update</code> &amp; <code>sudo apt-get upgrade</code>, then setup key-based authentication and user accounts.</p>
+
+
+</div>
+<div class="post-footer">
+  
+<div id="disqus_thread" class="col-md-12"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nuwen';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+  
+    <div class="post-navs row">
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Older
+            <span class="text-muted"> &middot; </span>
+            <a href="/archive">View Archive (8)</a>
+          </h3>
+          <h2 class="post-title-link"><a href="/grokking-threejs-cloth-animations">Grokking Three.js: Cloth Animations</a></h2>
+          
+
+        </div>
+      
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Newer
+            
+          </h3>
+          <h2 class="post-title-link"><a href="/pycon2016-down-the-magic-wormhole">PyCon 2016: Down the Magic Wormhole</a></h2>
+          <p>Brian Warner created a PAKE-based exchange to unite two inbound TCP connections, and initiate an adhoc data transfer between them.</p>
+
+        </div>
+      
+    </div>
+  
+
+
+          </div>
+          <div class="col-md-5 col-lg-4 col-lg-offset-1">
+            <div class="media">
+    <div class="media-body">
+        <img src="/assets/rainbow-sm.png" class="img-responsive img-rounded col-xs-5 pull-right" style="margin-top:15px">
+        <h3 class="text-left" style="margin-top:15px"><span class="purple">L</span>eigh <span class="text-reverse turquoise" style="margin-right:2px;">L</span>ohnson</h3>
+        <p class="sidebar">I'm a self-taught programmer infatuated with gameplay design. I blog about books, Python, Javascript, and IoT experiments. Proud supporter of <a href="https://twitter.com/theunpub">Unpub Games</a>.</p>
+        <p class="sidebar">Currently a software engineer <a href="https://www.ansible.com/">@Ansible</a>.</p>
+        <p class="sidebar">
+            <strong>Playing:</strong>
+            <br>Overwatch - Nuwen#1616, Roll for the Galaxy, Arboretum
+        </p>
+        <p class="sidebar">
+            <strong>Reading:</strong>
+            <br><i>Así es Como la Pierdes</i> by Junot Diaz</strong>
+        </p>
+        <!--
+        <p class="sidebar">
+        <strong>Making:</strong> <br> <a href="http://blog.leighjohnson.me/how-to-led-music-visualizer-raspberry-pi">An LED music visualizer</a>
+        -->
+    </div>
+</div>
+<div id="tag-cloud col-xs-12">
+    <a href="/tag/ghc2016/" class="set-1">GHC2016</a> <a href="/tag/iot/" class="set-1">IoT</a> <a href="/tag/raspberrypi/" class="set-1">RaspberryPi</a> <a href="/tag/bookrec/" class="set-1">bookrec</a> <a href="/tag/comics/" class="set-1">comics</a> <a href="/tag/cryptography/" class="set-1">cryptography</a> <a href="/tag/environments/" class="set-1">environments</a> <a href="/tag/feminism/" class="set-1">feminism</a> <a href="/tag/javascript/" class="set-1">javascript</a> <a href="/tag/linux/" class="set-1">linux</a> <a href="/tag/neopixels/" class="set-1">neopixels</a> <a href="/tag/osx/" class="set-1">osx</a> <a href="/tag/pycon2016/" class="set-3">pycon2016</a> <a href="/tag/python/" class="set-5">python</a> <a href="/tag/raspberrypi/" class="set-1">raspberrypi</a> <a href="/tag/sysadmin/" class="set-1">sysadmin</a> <a href="/tag/three.js/" class="set-1">three.js</a> <a href="/tag/webgl/" class="set-1">webgl</a> <a href="/tag/women-in-technology/" class="set-1">women in technology</a>
+</div>
+<div>
+    <img src="/assets/logo-v3.png" class="img-responsive col-xs-10 col-xs-offset-1 top-buffer">
+</div>
+
+          </div>
+        
+      </div>
+      <div class="row footer">
+        <div class="col-sm-12 text-center">
+          <!-- Feel free to remove this div. Uses purplecoat: http://ellekasai.github.io/purplecoat.js -->
+<div data-purplecoat="shiori" data-purplecoat-label="footer.html">
+&copy; <a href="http://leighhjohnson.me">Leigh Johnson</a> 2016.
+<a href="https://github.com/leigh-johnson/leigh-johnson.github.io/tree/source">Peep Source</a>. Built with <a href="http://jekyllrb.com/">Jekyll</a> and
+<a href="https://github.com/ellekasai/shiori">Shiori Theme</a>.
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69747414-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
